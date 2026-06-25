@@ -26,9 +26,9 @@
   .wordmark{font-variant-numeric:lining-nums;font-feature-settings:'lnum' 1,'tnum' 1}
   .neuron-mark{width:40px;height:40px;flex-shrink:0}
 
-  .wrap{max-width:1040px;margin:0 auto;padding:0 24px}
-  .section{max-width:1040px;margin:0 auto;padding:64px 24px}
-  .section > *{max-width:680px}
+  .wrap{max-width:760px;margin:0 auto;padding:0 24px}
+  .section{max-width:760px;margin:0 auto;padding:64px 24px}
+  .section > *{max-width:none}
   .label{font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:var(--muted);font-family:ui-monospace,monospace;margin-bottom:24px}
   .label.wound{color:var(--wound)}
   .heading{font-size:42px;line-height:1.1;font-weight:500;letter-spacing:-0.02em}
@@ -39,7 +39,7 @@
   .rule{height:1px;background:var(--steel);border:0}
 
   header{border-bottom:1px solid var(--steel)}
-  .head-in{max-width:1040px;margin:0 auto;padding:32px 24px;display:flex;flex-direction:column;gap:14px;align-items:flex-start}
+  .head-in{max-width:760px;margin:0 auto;padding:32px 24px;display:flex;flex-direction:column;gap:14px;align-items:flex-start}
   @media(min-width:640px){.head-in{flex-direction:row;align-items:center;justify-content:space-between}}
   .brand{display:flex;align-items:center;gap:16px}
   .brand .wm{font-size:30px;letter-spacing:-0.05em;font-weight:500;line-height:1}
@@ -79,7 +79,7 @@
   .door .email a:hover{color:var(--bone)}
 
   footer{border-top:1px solid var(--steel);padding:40px 0}
-  .foot{max-width:1040px;margin:0 auto;padding:0 24px;display:flex;flex-direction:column;gap:20px;align-items:center;text-align:center}
+  .foot{max-width:760px;margin:0 auto;padding:0 24px;display:flex;flex-direction:column;gap:20px;align-items:center;text-align:center}
   @media(min-width:640px){.foot{flex-direction:row;justify-content:space-between;text-align:left}}
   .foot .meta{font-size:12px;letter-spacing:1px;color:var(--muted);font-family:ui-monospace,monospace;line-height:1.8}
   .foot .social a{color:var(--muted);transition:color .15s;display:inline-flex}
@@ -109,7 +109,7 @@
 
 <section class="hero">
   <div class="pill"><span>THE CORE</span></div>
-  <h1>KIT55 turns separately awarded contractors<br>into one synchronized operating system.</h1>
+  <h1>KIT55 turns separately awarded contractors<br class="hbr">into one synchronized operating system.</h1>
   <p class="sub">Built for complex, non-vertical projects. Scopes must either converge or bleed.</p>
   <div class="stamp">SUPPRESSED VARIANCE &nbsp;/&nbsp; PROTECTED INVESTMENT &nbsp;/&nbsp; COMMITTED DELIVERY</div>
 </section>
@@ -249,8 +249,6 @@
     </div>
   </div>
 </footer>
-
-
 
 <script>
 (function(){
