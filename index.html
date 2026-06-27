@@ -90,6 +90,35 @@
     .section{padding:52px 24px}
   }
 .cta:focus-visible,.phone:focus-visible,.door .email a:focus-visible,.foot .social a:focus-visible,a:focus-visible{outline:2px solid var(--bone);outline-offset:3px;border-radius:2px}
+
+  /* ---- THE FEED (industry data loop) ---- */
+  .feed{position:relative;width:100%;aspect-ratio:16/9;min-height:300px;background:var(--ink);overflow:hidden;font-variant-numeric:lining-nums tabular-nums;font-feature-settings:'lnum' 1,'tnum' 1;border-top:1px solid var(--steel);border-bottom:1px solid var(--steel)}
+  .feed .scene{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:6% 8%;opacity:0;transition:opacity .9s ease;pointer-events:none}
+  .feed .scene.on{opacity:1}
+  .feed .kicker{font-family:ui-monospace,"SFMono-Regular",Menlo,Consolas,monospace;font-size:clamp(9px,1.5vw,12px);letter-spacing:.22em;text-transform:uppercase;color:var(--muted);margin-bottom:1.1em}
+  .feed .big{font-family:Georgia,"Times New Roman",serif;color:var(--bone);line-height:1.04;font-size:clamp(34px,8.4vw,84px);letter-spacing:-.01em}
+  .feed .stmt{font-family:Georgia,"Times New Roman",serif;color:var(--bone);line-height:1.18;font-size:clamp(21px,3.9vw,40px);letter-spacing:-.01em;max-width:18ch}
+  .feed .sub{font-family:Georgia,"Times New Roman",serif;color:var(--bone-soft);font-size:clamp(15px,2.4vw,23px);line-height:1.3;margin-top:.55em}
+  .feed .src{font-family:ui-monospace,"SFMono-Regular",Menlo,Consolas,monospace;font-size:clamp(8.5px,1.4vw,11px);letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-top:1.5em;line-height:1.6}
+  .feed .red{color:var(--wound)}
+  .feed .unit{font-size:.42em;color:var(--bone-soft);letter-spacing:.02em}
+  .feed .grid{display:grid;grid-template-columns:repeat(25,1fr);gap:clamp(2px,.7vw,5px);width:min(70%,520px);margin-bottom:1.4em}
+  .feed .dot{aspect-ratio:1;border-radius:50%;background:var(--steel);opacity:.45;transition:background .5s ease,opacity .5s ease,transform .5s ease}
+  .feed .dot.live{background:var(--bone);opacity:1}
+  .feed .barwrap{width:min(74%,540px);margin-bottom:1.3em}
+  .feed .track{position:relative;height:clamp(14px,2.6vw,22px);background:transparent;border:1px solid var(--steel)}
+  .feed .budget{position:absolute;top:0;bottom:0;left:0;width:55%;border-right:1px dashed var(--muted)}
+  .feed .fill{position:absolute;top:0;bottom:0;left:0;width:0;background:var(--wound);transition:width 1.5s cubic-bezier(.6,0,.2,1)}
+  .feed .blabel{display:flex;justify-content:space-between;margin-top:.6em;font-family:ui-monospace,"SFMono-Regular",Menlo,Consolas,monospace;font-size:clamp(8.5px,1.4vw,11px);letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+  .feed .soma{width:clamp(70px,15vw,120px);height:clamp(70px,15vw,120px);margin-bottom:1.1em}
+  .feed .arm{stroke:var(--steel);stroke-width:2.4;stroke-linecap:round;opacity:0;transition:opacity .5s ease}
+  .feed .arm.show{opacity:1}
+  .feed .tip{fill:var(--bone);opacity:0;transition:opacity .5s ease}
+  .feed .tip.show{opacity:1}
+  .feed .core{fill:var(--bone);opacity:0;transition:opacity .7s ease;transform-origin:center;transform:scale(.2)}
+  .feed .core.show{opacity:1;transform:scale(1)}
+  .feed .static-frame{position:absolute;inset:0;display:none;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:6% 8%}
+  @media (prefers-reduced-motion:reduce){.feed .scene{display:none!important}.feed .static-frame{display:flex}}
 </style>
 </head>
 <body>
@@ -182,9 +211,70 @@
 </section>
 
 <!-- MEDIA SLOT: hidden until fed. Unhide by removing style display:none when media is ready. -->
-<section class="section" id="media-slot" style="display:none">
+<section class="section" id="media-slot">
   <div class="label">HAPPENING IN OUR INDUSTRY</div>
-  <div style="aspect-ratio:16/9;width:100%;border:1px solid var(--steel);background:#1A1D21"></div>
+  <div class="feed" id="feed" role="img" aria-label="Data sequence on project failure and the proven value of integrated delivery, resolving on the KIT55 Soma mark.">
+    <div class="scene" data-i="0">
+      <div class="kicker">Large projects worldwide</div>
+      <div class="grid" id="dotgrid"></div>
+      <div class="stmt">Five in a thousand land on time, on budget, on benefit.</div>
+      <div class="src">Flyvbjerg &middot; University of Oxford &middot; 16,000+ projects</div>
+    </div>
+    <div class="scene" data-i="1">
+      <div class="kicker">The other 995</div>
+      <div class="big"><span id="c1">0</span>%</div>
+      <div class="sub">go over. On cost. On schedule. On both.</div>
+      <div class="src">Flyvbjerg &middot; Oxford &middot; 16,000+ projects</div>
+    </div>
+    <div class="scene" data-i="2">
+      <div class="kicker">Megaprojects, average overrun</div>
+      <div class="barwrap">
+        <div class="track"><div class="budget"></div><div class="fill" id="overfill"></div></div>
+        <div class="blabel"><span>Budget</span><span class="red">+80% over</span></div>
+      </div>
+      <div class="sub">Seventy years. Every continent. Public and private.</div>
+      <div class="src">Flyvbjerg, Oxford &middot; McKinsey Global Institute</div>
+    </div>
+    <div class="scene" data-i="3">
+      <div class="kicker">It is not just construction</div>
+      <div class="big"><span id="c2">0</span>%</div>
+      <div class="sub">The worst IT projects run this far past budget.</div>
+      <div class="src">Flyvbjerg &amp; Gardner &middot; How Big Things Get Done</div>
+    </div>
+    <div class="scene" data-i="4">
+      <div class="kicker">The cause</div>
+      <div class="stmt">Every part is good. No one owns the space between them.</div>
+      <div class="src">Where projects bleed</div>
+    </div>
+    <div class="scene" data-i="5">
+      <div class="kicker">Close the seams &middot; Akron Children's Hospital &middot; $180M</div>
+      <div class="big">$<span id="c3">0</span><span class="unit">M saved</span></div>
+      <div class="sub">Integrated delivery. Two months ahead of schedule.</div>
+      <div class="src">Welty Building Co. + The Boldt Co. &middot; via BuiltWorlds</div>
+    </div>
+    <div class="scene" data-i="6">
+      <div class="kicker">Wisconsin Institutes for Discovery &middot; $213M</div>
+      <div class="big"><span id="c4">0</span>%</div>
+      <div class="sub">Saved against a 10% target. A month early.</div>
+      <div class="src">Integrated project delivery &middot; via BuiltWorlds</div>
+    </div>
+    <div class="scene" data-i="7">
+      <div class="kicker">The mechanism</div>
+      <div class="stmt">Fewer change orders. Less rework. Fewer adversarial relationships.</div>
+      <div class="src">Associated General Contractors of America</div>
+    </div>
+    <div class="scene" data-i="8">
+      <svg class="soma" id="soma" viewBox="0 0 100 100" aria-hidden="true"></svg>
+      <div class="stmt">Someone has to own the seams.</div>
+      <div class="src" style="letter-spacing:.34em;color:var(--bone-soft)">KIT55 &nbsp;SOMA</div>
+    </div>
+    <div class="static-frame">
+      <div class="kicker">Large projects worldwide</div>
+      <div class="big" style="margin-bottom:.1em">0.5<span class="unit"> % succeed</span></div>
+      <div class="stmt" style="margin-top:.3em">Every part is good. No one owns the space between them.</div>
+      <div class="src">Flyvbjerg &middot; University of Oxford &middot; 16,000+ projects</div>
+    </div>
+  </div>
 </section>
 
 <hr class="rule">
@@ -274,4 +364,43 @@
 })();
 </script>
 
-</body></html>    
+<script>
+(function(){
+  var feed=document.getElementById('feed');
+  if(!feed) return;
+  if(window.matchMedia('(prefers-reduced-motion:reduce)').matches) return;
+  var scenes=[].slice.call(feed.querySelectorAll('.scene'));
+  var grid=document.getElementById('dotgrid'),N=200;
+  for(var i=0;i<N;i++){var d=document.createElement('div');d.className='dot';grid.appendChild(d);}
+  var dots=[].slice.call(grid.children);
+  var soma=document.getElementById('soma'),cx=50,cy=50;
+  for(var k=0;k<8;k++){
+    var a=k*45*Math.PI/180,x1=cx+14*Math.cos(a),y1=cy+14*Math.sin(a),x2=cx+40*Math.cos(a),y2=cy+40*Math.sin(a);
+    var ln=document.createElementNS('http://www.w3.org/2000/svg','line');
+    ln.setAttribute('x1',x1.toFixed(1));ln.setAttribute('y1',y1.toFixed(1));ln.setAttribute('x2',x2.toFixed(1));ln.setAttribute('y2',y2.toFixed(1));ln.setAttribute('class','arm');soma.appendChild(ln);
+    var c=document.createElementNS('http://www.w3.org/2000/svg','circle');
+    c.setAttribute('cx',x2.toFixed(1));c.setAttribute('cy',y2.toFixed(1));c.setAttribute('r','2.6');c.setAttribute('class','tip');soma.appendChild(c);
+  }
+  var core=document.createElementNS('http://www.w3.org/2000/svg','circle');
+  core.setAttribute('cx',50);core.setAttribute('cy',50);core.setAttribute('r','10');core.setAttribute('class','core');soma.appendChild(core);
+  var arms=soma.querySelectorAll('.arm'),tips=soma.querySelectorAll('.tip');
+  function countTo(el,to,dur,dec){var t0=null;dec=dec||0;function step(t){if(!t0)t0=t;var p=Math.min((t-t0)/dur,1);var v=to*(1-Math.pow(1-p,3));el.textContent=dec?v.toFixed(dec):Math.round(v);if(p<1)requestAnimationFrame(step);else el.textContent=dec?to.toFixed(dec):to;}requestAnimationFrame(step);}
+  function enter(i){
+    if(i===0){dots.forEach(function(d){d.classList.remove('live')});setTimeout(function(){dots[Math.floor(N/2)].classList.add('live');},500);}
+    if(i===1) countTo(document.getElementById('c1'),91.5,1500,1);
+    if(i===2){var f=document.getElementById('overfill');f.style.width='0';requestAnimationFrame(function(){requestAnimationFrame(function(){f.style.width='99%';});});}
+    if(i===3) countTo(document.getElementById('c2'),447,1700,0);
+    if(i===5) countTo(document.getElementById('c3'),20,1500,0);
+    if(i===6) countTo(document.getElementById('c4'),12,1300,0);
+    if(i===8){arms.forEach(function(a,j){setTimeout(function(){a.classList.add('show')},120*j);});tips.forEach(function(t,j){setTimeout(function(){t.classList.add('show')},120*j+200);});setTimeout(function(){core.classList.add('show')},8*120+300);}
+  }
+  function reset(i){
+    if(i===2)document.getElementById('overfill').style.width='0';
+    if(i===8){arms.forEach(function(a){a.classList.remove('show')});tips.forEach(function(t){t.classList.remove('show')});core.classList.remove('show');}
+  }
+  var durs=[6,5,6,5,6,7,6,6,7],cur=-1;
+  function show(i){if(cur>=0){scenes[cur].classList.remove('on');reset(cur);}cur=i;scenes[i].classList.add('on');enter(i);setTimeout(function(){show((i+1)%scenes.length);},durs[i]*1000);}
+  setTimeout(function(){show(0);},300);
+})();
+</script>
+</body></html>
