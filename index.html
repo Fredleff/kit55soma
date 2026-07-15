@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- KIT55 SOMA v2.1 — Hidden media square added for personal/timely commentary (USMCA etc.) -->
+<!-- KIT55 SOMA v2.2 — Trigger removed. Media square is now fully private. -->
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,11 +15,11 @@
   --bone:#EAE4D7;
   --bone-dim:#9A9284;
   --bone-faint:#8C857A;
-  --wound:#A62A1B;        /* clotted oxblood — large accents */
-  --wound-lit:#CF4A34;    /* legible wound — small text / ticker */
+  --wound:#A62A1B;
+  --wound-lit:#CF4A34;
   --wound-band:#17100E;
-  --suture:#3F7D63;       /* surgical green — large accents */
-  --suture-lit:#66A98A;   /* legible green — small text / ticker */
+  --suture:#3F7D63;
+  --suture-lit:#66A98A;
   --suture-band:#0E1512;
   --line:rgba(234,228,215,0.12);
   --line-strong:rgba(234,228,215,0.22);
@@ -353,7 +353,7 @@ p:last-child{margin-bottom:0;}
 .foot-cited:hover{color:var(--bone-dim);border-bottom-color:var(--bone-faint);}
 .foot-cited:focus-visible{outline:2px solid var(--suture-lit);outline-offset:3px;}
 
-/* ---------- hidden media square (personal channel, blends when empty) ---------- */
+/* ---------- hidden media square (private only - no trigger) ---------- */
 .hidden-media-square{
   display:none;
   max-width:320px;
@@ -364,9 +364,6 @@ p:last-child{margin-bottom:0;}
   overflow:hidden;
   border:1px solid var(--line);
 }
-.hidden-media-square.has-content{
-  display:block;
-}
 .hidden-media-square video,
 .hidden-media-square iframe{
   width:100%;
@@ -374,21 +371,6 @@ p:last-child{margin-bottom:0;}
   display:block;
   background:var(--ink-2);
 }
-
-/* tiny subtle trigger in footer - blends, no text saying media */
-.media-whisper{
-  display:inline-block;
-  width:6px;
-  height:6px;
-  background:var(--suture-lit);
-  border-radius:50%;
-  margin-left:10px;
-  vertical-align:middle;
-  opacity:0.25;
-  cursor:pointer;
-  transition:opacity .2s ease;
-}
-.media-whisper:hover{opacity:0.6;}
 
 /* ---------- reveal ---------- */
 .reveal{opacity:0;transform:translateY(16px);transition:opacity .8s ease,transform .8s ease;}
@@ -398,7 +380,6 @@ p:last-child{margin-bottom:0;}
   *{scroll-behavior:auto!important;}
   .ticker--red .track,.ticker--green .track{animation:none;transform:translateX(0);}
   .reveal{opacity:1;transform:none;transition:none;}
-  .draw path,.draw line,.draw polyline{stroke-dashoffset:0;transition:none;}
 }
 </style>
 </head>
@@ -510,13 +491,9 @@ p:last-child{margin-bottom:0;}
   <div class="wrap">
     <div class="suture-art draw reveal in" aria-hidden="true">
       <svg viewBox="0 0 520 150" fill="none">
-        <!-- left field -->
         <line x1="0" y1="75" x2="150" y2="75" stroke="var(--line-strong)" stroke-width="1" style="--len:150"></line>
-        <!-- right field -->
         <line x1="370" y1="75" x2="520" y2="75" stroke="var(--line-strong)" stroke-width="1" style="--len:150"></line>
-        <!-- soma -->
         <circle cx="260" cy="75" r="7" fill="var(--suture)"></circle>
-        <!-- dendrites reaching across, suturing -->
         <path d="M253 75 C220 60,190 66,150 75" stroke="var(--suture-lit)" stroke-width="1.5" style="--len:130"></path>
         <path d="M255 80 C224 96,192 92,150 82" stroke="var(--suture-lit)" stroke-width="1.5" style="--len:130"></path>
         <path d="M267 75 C300 60,332 66,370 75" stroke="var(--suture-lit)" stroke-width="1.5" style="--len:130"></path>
@@ -636,29 +613,21 @@ p:last-child{margin-bottom:0;}
     </a>
     <div class="foot-meta">
       Cross-border operations · Supply-chain integration<br>
-      <a class="foot-link" href="mailto:office@kit55soma.com">office@kit55soma.com</a> · <a class="foot-link" href="tel:+18587442700">858-744-2700</a> · <span class="media-whisper" onclick="toggleHiddenMedia()" title="Personal channel"></span>
+      <a class="foot-link" href="mailto:office@kit55soma.com">office@kit55soma.com</a> · <a class="foot-link" href="tel:+18587442700">858-744-2700</a>
     </div>
     <span class="foot-cited">Every figure on this site is public record. Sources cited inline.</span>
 
-  <!-- HIDDEN MEDIA SQUARE 
-       Completely invisible (display:none) until you add content and toggle it.
-       Edit inside this block. Use <video> or <iframe> (YouTube/Loom with modestbranding).
-       Square aspect. It blends with the background when empty or collapsed.
-       Example for USMCA commentary: replace the inner content with your short video or note.
+  <!-- 
+    HIDDEN MEDIA SQUARE (PRIVATE)
+    Only you can edit this. 
+    It is completely invisible on the live site.
+    To activate: 
+    1. Paste your video or note inside the div below
+    2. Change display:none to display:block
+    3. Commit
   -->
-  <div id="hidden-media-square" class="hidden-media-square">
-    <!-- Your content here. Leave empty or remove has-content class to hide. -->
-    <!-- Example starter (delete or replace):
-    <div style="padding:20px; color:var(--bone); font-size:0.9rem; line-height:1.5;">
-      <strong style="color:var(--suture-lit);">USMCA on year-to-year.</strong><br>
-      The 16-year certainty just became annual renegotiation risk. 
-      That means wider seams in cross-border programs. Procurement windows shorten. 
-      Change orders will spike. This is exactly the kind of disarray where aligned operators pull ahead.
-      <div style="margin-top:12px; font-size:0.75rem; opacity:0.7;">
-        <a href="#" style="color:var(--suture-lit);">Watch the 47-second briefing →</a>
-      </div>
-    </div>
-    -->
+  <div id="hidden-media-square" class="hidden-media-square" style="display:none;">
+    <!-- Your private content goes here -->
   </div>
 
   </div>
@@ -755,22 +724,6 @@ var io=new IntersectionObserver(function(entries){
   });
 },{threshold:0.16,rootMargin:'0px 0px -8% 0px'});
 document.querySelectorAll('.reveal,.draw').forEach(function(el){io.observe(el);});
-
-/* ---- hidden media square toggle ---- */
-function toggleHiddenMedia(){
-  var sq = document.getElementById('hidden-media-square');
-  if(!sq) return;
-  if(sq.style.display === 'block' || sq.classList.contains('has-content')){
-    sq.style.display = 'none';
-    sq.classList.remove('has-content');
-  } else {
-    sq.style.display = 'block';
-    sq.classList.add('has-content');
-  }
-  if(sq.style.display === 'block'){
-    sq.scrollIntoView({behavior:'smooth', block:'center'});
-  }
-}
 </script>
 
 </body></html>
