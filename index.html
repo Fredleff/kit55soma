@@ -1,712 +1,428 @@
-<!DOCTYPE html>
-<!-- saved from url=(0025)https://federicoleff.com/ -->
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>KIT55 SOMA — We eliminate the space between them.</title>
-<link rel="preconnect" href="https://fonts.googleapis.com/">
-<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
-<link href="./KIT55 SOMA — We eliminate the space between them.112211_files/css2" rel="stylesheet">
-<style>
-:root{
-  --ink:#0C0B09;
-  --ink-2:#16130D;
-  --ink-3:#1D1912;
-  --bone:#EAE4D7;
-  --bone-dim:#9A9284;
-  --bone-faint:#8C857A;
-  --wound:#A62A1B;
-  --wound-lit:#CF4A34;
-  --wound-band:#17100E;
-  --suture:#3F7D63;
-  --suture-lit:#66A98A;
-  --suture-band:#0E1512;
-  --line:rgba(234,228,215,0.12);
-  --line-strong:rgba(234,228,215,0.22);
-  --serif:Georgia,'Times New Roman',serif;
-  --mono:'IBM Plex Mono',ui-monospace,'SFMono-Regular',Menlo,Consolas,monospace;
-  --col:760px;
-}
-
-*{box-sizing:border-box;}
-html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;}
-body{
-  margin:0;
-  background:var(--ink);
-  color:var(--bone);
-  font-family:var(--serif);
-  font-size:18px;
-  line-height:1.66;
-  -webkit-font-smoothing:antialiased;
-  text-rendering:optimizeLegibility;
-  overflow-x:hidden;
-  font-variant-numeric:lining-nums;
-}
-
-.wrap{max-width:var(--col);margin:0 auto;padding:0 28px;}
-.bleed{width:100%;}
-.section{padding:112px 0;}
-.section--tight{padding:88px 0;}
-
-.eyebrow{
-  font-family:var(--mono);
-  font-size:0.8rem;
-  font-weight:500;
-  letter-spacing:0.24em;
-  text-transform:uppercase;
-  color:var(--bone-dim);
-  margin:0 0 30px;
-  display:flex;align-items:center;gap:14px;
-}
-.eyebrow::before{
-  content:"";width:26px;height:1px;background:var(--wound);flex:0 0 auto;
-}
-.eyebrow--suture::before{background:var(--suture);}
-
-h1,h2,h3{font-weight:700;margin:0;}
-h1{
-  font-size:clamp(2.5rem,6.4vw,4.7rem);
-  line-height:1.02;
-  letter-spacing:-0.018em;
-}
-h2{
-  font-size:clamp(1.9rem,4.2vw,3rem);
-  line-height:1.08;
-  letter-spacing:-0.012em;
-}
-p{margin:0 0 1.25em;color:var(--bone);}
-p:last-child{margin-bottom:0;}
-.lede{color:var(--bone);}
-.dim{color:var(--bone-dim);}
-.wound{color:var(--wound-lit);}
-.big-line{
-  font-size:clamp(1.75rem,4vw,2.7rem);
-  line-height:1.12;
-  letter-spacing:-0.01em;
-  font-weight:700;
-}
-
-.topbar{
-  position:fixed;top:0;left:0;right:0;z-index:50;
-  display:flex;align-items:center;justify-content:space-between;
-  padding:15px 28px;
-  background:rgba(12,11,9,0);
-  transition:background .4s ease,border-color .4s ease;
-  border-bottom:1px solid transparent;
-}
-.topbar.scrolled{
-  background:rgba(12,11,9,0.82);
-  backdrop-filter:blur(9px);-webkit-backdrop-filter:blur(9px);
-  border-bottom:1px solid var(--line);
-}
-.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--bone);}
-.brand svg{display:block;flex:0 0 auto;}
-.brand .mark{width:34px;height:34px;display:block;object-fit:contain;}
-.wm-stack{display:flex;flex-direction:column;line-height:1;}
-.wm-1{font-family:var(--mono);font-size:0.98rem;font-weight:600;letter-spacing:0.14em;}
-.wm-2{font-family:var(--mono);font-size:0.6rem;font-weight:500;letter-spacing:0.42em;color:var(--bone-dim);margin-top:3px;}
-.topbar .tag{
-  font-family:var(--mono);font-size:0.8rem;letter-spacing:0.2em;
-  text-transform:uppercase;color:var(--bone-faint);
-}
-@media(max-width:600px){.topbar .tag{display:none;}}
-
-.skip{position:absolute;left:-9999px;top:0;z-index:100;
-  background:var(--bone);color:var(--ink);padding:12px 18px;
-  font-family:var(--mono);font-size:0.8rem;letter-spacing:0.12em;text-transform:uppercase;}
-.skip:focus{left:16px;top:16px;}
-
-.offer{
-  margin:44px 0 40px;padding:30px 32px;
-  border:1px solid var(--line-strong);border-left:3px solid var(--suture);
-  background:var(--ink-2);max-width:62ch;
-}
-.offer-h{
-  font-family:var(--mono);font-size:0.8rem;font-weight:500;letter-spacing:0.2em;
-  text-transform:uppercase;color:var(--suture-lit);margin:0 0 14px;
-}
-.offer p{font-size:1.05rem;line-height:1.62;color:var(--bone);margin:0 0 10px;}
-.offer .terms{
-  font-family:var(--mono);font-size:0.8rem;letter-spacing:0.1em;
-  text-transform:uppercase;color:var(--bone-dim);margin:16px 0 0;
-}
-.cta-row{display:flex;flex-wrap:wrap;gap:14px 26px;align-items:center;}
-.cta-alt{
-  font-family:var(--mono);font-size:0.85rem;letter-spacing:0.08em;
-  color:var(--bone-dim);text-decoration:none;border-bottom:1px solid var(--line-strong);
-  padding-bottom:2px;
-}
-.cta-alt:hover{color:var(--bone);border-bottom-color:var(--bone);}
-
-.hero{
-  position:relative;
-  padding:190px 0 120px;
-  overflow:hidden;
-}
-.hero-inner{position:relative;z-index:2;}
-.hero h1{max-width:18ch;margin-bottom:14px;}
-.hero h1 .accent{color:var(--wound-lit);}
-.hero-sub{
-  font-family:var(--mono);font-size:0.82rem;letter-spacing:0.06em;
-  color:var(--bone-dim);max-width:58ch;margin-top:26px;line-height:1.75;
-}
-
-.tri{margin-top:0;display:grid;gap:0;border-top:1px solid var(--line);}
-.tri--hero{margin-top:8px;border-top:none;}
-.tri--hero .tri-row{grid-template-columns:210px 1fr;padding:34px 0;border-top:1px solid var(--line);border-bottom:none;}
-.tri--hero .tri-row:last-child{border-bottom:1px solid var(--line);}
-.tri--hero .tri-a{font-size:clamp(1.5rem,3vw,2.1rem);line-height:1.28;letter-spacing:-0.01em;color:var(--bone);}
-.tri--hero .tri-a .who{color:var(--wound-lit);}
-.tri--hero .tri-q{padding-top:12px;}
-.tri-row{
-  display:grid;grid-template-columns:200px 1fr;gap:34px;
-  padding:26px 0;border-bottom:1px solid var(--line);
-  align-items:start;
-}
-.tri-q{
-  font-family:var(--mono);font-size:0.72rem;font-weight:500;letter-spacing:0.16em;
-  text-transform:uppercase;color:var(--bone-dim);padding-top:6px;
-}
-.tri-a{font-size:1.24rem;line-height:1.5;color:var(--bone);}
-.tri-a .who{color:var(--bone);font-weight:700;}
-@media(max-width:640px){
-  .tri-row{grid-template-columns:1fr;gap:10px;}
-  .tri-q{padding-top:0;}
-}
-
-.seam{display:block;width:100%;height:40px;}
-.seam svg{display:block;width:100%;height:100%;}
-
-.trap p{font-size:1.16rem;line-height:1.68;color:var(--bone);max-width:60ch;}
-.trap .verdict{
-  margin:38px 0;
-  font-size:clamp(1.9rem,4.6vw,3.1rem);
-  line-height:1.06;font-weight:700;letter-spacing:-0.014em;
-  color:var(--wound-lit);
-  max-width:18ch;
-}
-
-.pnl-grid{
-  display:grid;
-  grid-template-columns:1fr 1.5fr 1fr;
-  gap:18px;
-  margin-top:44px;
-  align-items:stretch;
-}
-.box{
-  background:var(--ink-2);
-  border:1px solid var(--line);
-  border-top:2px solid var(--wound);
-  padding:30px 28px;
-  display:flex;flex-direction:column;
-}
-.box--hero{background:var(--ink-3);}
-.box-n{
-  font-family:var(--mono);font-size:0.68rem;letter-spacing:0.18em;
-  text-transform:uppercase;color:var(--wound-lit);margin-bottom:16px;
-}
-.box-t{
-  font-size:1.28rem;font-weight:700;line-height:1.15;margin-bottom:16px;
-  letter-spacing:-0.01em;
-}
-.box p{font-size:1rem;line-height:1.62;color:var(--bone-dim);margin:0;}
-.box--hero .box-t{font-size:1.5rem;}
-.box--hero p{color:var(--bone);}
-.dagger{
-  margin-top:34px;padding:30px 0 0;border-top:1px solid var(--line);
-  font-size:1.28rem;line-height:1.5;color:var(--bone);max-width:62ch;
-}
-.dagger .end{color:var(--wound-lit);}
-@media(max-width:820px){
-  .pnl-grid{grid-template-columns:1fr;}
-}
-
-.ticker{
-  position:relative;
-  border-top:1px solid var(--line);
-  border-bottom:1px solid var(--line);
-  padding:22px 0;
-  overflow:hidden;
-  white-space:nowrap;
-  -webkit-mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent);
-          mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent);
-}
-.ticker--red{background:var(--wound-band);}
-.ticker--green{background:var(--suture-band);}
-.track{
-  display:inline-flex;align-items:center;
-  font-family:var(--mono);font-size:0.94rem;letter-spacing:0.01em;
-  will-change:transform;
-}
-.ticker--red  .track{animation:crawl-l 92s linear infinite;}
-.ticker--green .track{animation:crawl-l 78s linear infinite;}
-.ticker:hover .track{animation-play-state:paused;}
-@keyframes crawl-l{from{transform:translateX(0);}to{transform:translateX(-50%);}}
-
-.tick{padding:0 4px;}
-.ticker--red .tick{color:var(--wound-lit);}
-.ticker--red .tick .fig{color:#E8A99B;font-weight:600;}
-.ticker--green .tick{color:var(--suture-lit);}
-.ticker--green .tick .cite{color:var(--bone-faint);}
-.sep{
-  padding:0 26px;font-size:0.8rem;
-  color:var(--wound);opacity:.7;
-}
-.ticker--green .sep{color:var(--suture);}
-
-.intervention{position:relative;}
-.suture-art{
-  margin:0 auto 54px;max-width:520px;
-}
-.suture-art svg{display:block;width:100%;height:auto;}
-.intervention .lede{font-size:1.22rem;line-height:1.62;max-width:60ch;}
-.that-is{
-  margin:36px 0;font-size:clamp(2rem,5vw,3.2rem);line-height:1.05;
-  font-weight:700;letter-spacing:-0.015em;
-}
-.that-is .name{color:var(--suture-lit);}
-.eliminate{
-  margin-top:40px;
-  font-size:clamp(1.6rem,3.6vw,2.4rem);line-height:1.16;font-weight:700;
-  letter-spacing:-0.012em;max-width:20ch;
-}
-
-.campaign-intro p{font-size:1.14rem;line-height:1.64;max-width:60ch;color:var(--bone);}
-.stages{margin-top:56px;display:grid;gap:0;border-top:1px solid var(--line);}
-.stage{
-  display:grid;grid-template-columns:96px 1fr;gap:30px;
-  padding:34px 0;border-bottom:1px solid var(--line);
-}
-.stage-n{
-  font-family:var(--mono);font-size:1.5rem;font-weight:600;
-  color:var(--suture-lit);letter-spacing:0.02em;line-height:1;
-}
-.stage-t{font-size:1.34rem;font-weight:700;margin-bottom:12px;letter-spacing:-0.01em;}
-.stage p{font-size:1.02rem;line-height:1.62;color:var(--bone-dim);margin:0;}
-.stage p .edge{color:var(--bone);}
-@media(max-width:640px){
-  .stage{grid-template-columns:1fr;gap:8px;}
-}
-.sovereign{
-  margin-top:60px;padding-top:40px;border-top:2px solid var(--suture);
-}
-.sovereign .eyebrow{margin-bottom:22px;}
-.sovereign p{font-size:1.24rem;line-height:1.55;color:var(--bone);max-width:60ch;}
-
-.move p{font-size:1.24rem;line-height:1.58;color:var(--bone);max-width:60ch;}
-.move .known{color:var(--bone);}
-.move .verdict{
-  margin:44px 0 40px;
-  font-size:clamp(2.4rem,6vw,4rem);line-height:1;font-weight:700;
-  letter-spacing:-0.02em;
-}
-.move .verdict .open{color:var(--bone-dim);display:block;font-size:0.5em;
-  letter-spacing:-0.005em;margin-bottom:10px;font-weight:700;}
-.cta{
-  display:inline-flex;align-items:center;gap:14px;
-  font-family:var(--mono);font-size:0.82rem;font-weight:600;
-  letter-spacing:0.14em;text-transform:uppercase;
-  color:var(--ink);background:var(--bone);
-  text-decoration:none;padding:19px 30px;
-  border:1px solid var(--bone);
-  transition:background .22s ease,color .22s ease,transform .22s ease;
-}
-.cta:hover{background:transparent;color:var(--bone);transform:translateY(-2px);}
-.cta svg{width:16px;height:16px;display:block;}
-.cta:focus-visible{outline:2px solid var(--suture-lit);outline-offset:4px;}
-
-.foot{
-  border-top:1px solid var(--line);
-  padding:52px 0 60px;
-}
-.foot-row{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;flex-wrap:wrap;}
-.foot .brand .wm{color:var(--bone);}
-.foot-meta{font-family:var(--mono);font-size:0.68rem;letter-spacing:0.14em;
-  text-transform:uppercase;color:var(--bone-faint);line-height:1.9;}
-.foot-link{color:var(--bone-dim);text-decoration:none;border-bottom:1px solid transparent;transition:color .2s ease,border-color .2s ease;}
-.foot-link:hover{color:var(--bone);border-bottom-color:var(--bone-faint);}
-.foot-link:focus-visible{outline:2px solid var(--suture-lit);outline-offset:3px;}
-.foot-cited{
-  font-family:var(--mono);font-size:0.78rem;letter-spacing:0.12em;
-  color:var(--bone-faint);text-decoration:none;border-bottom:1px solid transparent;
-  transition:color .2s ease,border-color .2s ease;
-}
-.foot-cited:hover{color:var(--bone-dim);border-bottom-color:var(--bone-faint);}
-.foot-cited:focus-visible{outline:2px solid var(--suture-lit);outline-offset:3px;}
-
-.hidden-media-square{
-  display:none;
-  max-width:320px;
-  aspect-ratio:1 / 1;
-  background:var(--ink);
-  margin:48px auto 0;
-  position:relative;
-  overflow:hidden;
-  border:1px solid var(--line);
-}
-.hidden-media-square video,
-.hidden-media-square iframe{
-  width:100%;
-  height:100%;
-  display:block;
-  background:var(--ink-2);
-}
-
-.reveal{opacity:0;transform:translateY(16px);transition:opacity .8s ease,transform .8s ease;}
-.reveal.in{opacity:1;transform:none;}
-
-@media(prefers-reduced-motion:reduce){
-  *{scroll-behavior:auto!important;}
-  .ticker--red .track,.ticker--green .track{animation:none;transform:translateX(0);}
-  .reveal{opacity:1;transform:none;transition:none;}
-}
-</style>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>KIT55 Soma — Aligning Fragmented Operations</title>
+  <meta name="description" content="KIT55 Soma restores control across fragmented enterprises by owning the connections between independent functions, specialists, and scopes.">
+  <meta name="theme-color" content="#11110f">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="KIT55 Soma — Aligning Fragmented Operations">
+  <meta property="og:description" content="The work begins where everyone else decided their responsibility ended.">
+  <meta property="og:url" content="https://kit55soma.com/">
+  <meta property="og:image" content="https://kit55soma.com/social-card.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://kit55soma.com/">
+  <link rel="icon" href="logo-mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to the argument</a>
 
-<a class="skip" href="https://federicoleff.com/#top">Skip to content</a>
-
-<!-- ============ STICKY MARK ============ -->
-<header class="topbar" id="topbar">
-  <a class="brand" href="https://federicoleff.com/#top" aria-label="KIT55 SOMA home">
-    <svg class="mark" width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <circle cx="9" cy="17" r="4" stroke="#EAE4D7" stroke-width="1.5"></circle>
-      <circle cx="25" cy="17" r="4" stroke="#EAE4D7" stroke-width="1.5"></circle>
-      <path d="M13 17 L21 17" stroke="#66A98A" stroke-width="1.8" stroke-linecap="round"></path>
-      <path d="M15 14 L13 17 L15 20" stroke="#66A98A" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path>
-      <path d="M19 14 L21 17 L19 20" stroke="#66A98A" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path>
-    </svg>
-    <span class="wm-stack">
-      <span class="wm-1">KIT55</span>
-      <span class="wm-2">SOMA</span>
-    </span>
-  </a>
-  <span class="tag">Operational Resilience Engineering</span>
-</header>
-
-<main id="top">
-
-<!-- ============ HERO ============ -->
-<section class="hero" aria-labelledby="hero-h">
-  <div class="wrap hero-inner">
-    <p class="eyebrow">Where the money bleeds</p>
-    <h1 id="hero-h" class="reveal in">Typical fragmented arrangement.</h1>
-    
-    <div class="tri tri--hero">
-      <div class="tri-row reveal in">
-        <div class="tri-q">Where is it bleeding</div>
-        <div class="tri-a">In the handoffs between departments, vendors, and functions that nobody owns end-to-end. Where responsibility goes to die.</div>
-      </div>
-      <div class="tri-row reveal in">
-        <div class="tri-q">Why is it happening</div>
-        <div class="tri-a">Because every entity optimizes its own scope. They all hit their numbers. The project pays for the space between them.</div>
-      </div>
-      <div class="tri-row reveal in">
-        <div class="tri-q">Who stops it</div>
-        <div class="tri-a"><span class="who">KIT55 SOMA.</span> We plug the leak, then engineer the infrastructure that keeps it plugged long after we're gone.</div>
-      </div>
-    </div>
-    
-    <p class="hero-sub reveal in">KIT55 SOMA is an interim operational leadership unit. We locate every hidden seam — inside one organization or across borders — expose the bleed, impose structural order, and engineer the permanent infrastructure so accountability becomes continuous and the project actually delivers. Construction, multifamily, supply chain, warehousing, back office, and any operation where local success destroys the total outcome.</p>
-  </div>
-</section>
-
-<!-- seam divider: bleeding -->
-<div class="seam wrap" aria-hidden="true">
-  <svg viewBox="0 0 760 40" preserveAspectRatio="none">
-    <line x1="0" y1="20" x2="352" y2="20" stroke="var(--line-strong)" stroke-width="1"></line>
-    <line x1="408" y1="20" x2="760" y2="20" stroke="var(--line-strong)" stroke-width="1"></line>
-    <path d="M380 20 L380 39" stroke="var(--wound)" stroke-width="1.6"></path>
-    <circle cx="380" cy="20" r="2.2" fill="var(--wound)"></circle>
-  </svg>
-</div>
-
-<!-- ============ FRAGMENTATION TRAP ============ -->
-<section class="section trap" aria-labelledby="trap-h">
-  <div class="wrap">
-    <p class="eyebrow">The Fragmentation Trap</p>
-    <h2 id="trap-h" class="reveal in">Every CEO falls for the same operational illusion.</h2>
-    <p class="reveal in" style="margin-top:30px;">You split the operation into specialized entities because conventional wisdom says specialization equals efficiency. Independent procurement. Isolated logistics brokers. Standalone sales forces. Subcontracted trades. You think you're building an elite network.</p>
-    <p class="verdict reveal in">You're building a circular firing squad.</p>
-    <p class="reveal in">Fragmentation happens the moment leadership decides that managing isolated, competing teams is safer than engineering a unified operation. That decision feels like control. It's the fatal mistake.</p>
-  </div>
-</section>
-
-<!-- ============ P&L BOXES ============ -->
-<section class="section section--tight" aria-labelledby="pnl-h">
-  <div class="wrap">
-    <p class="eyebrow">How fragmentation silently kills your P&amp;L</p>
-    <h2 id="pnl-h" class="reveal in">Every entity hits its number. The transaction still loses money.</h2>
-
-    <div class="pnl-grid">
-      <div class="box reveal in">
-        <div class="box-n">The subcontractor illusion</div>
-        <div class="box-t">You didn't shift the risk. You multiplied the seams.</div>
-        <p>You outsource execution to a web of independent vendors, believing you've shifted the risk. What you've actually done is multiply the seams — and the seams are exactly where critical data, customs documentation, and timing disappear.</p>
-      </div>
-
-      <div class="box box--hero reveal in">
-        <div class="box-n">The change order nobody carried</div>
-        <div class="box-t">One change. Five entities. Every one did its job.</div>
-        <p>Design changes a spec and tells the client it's handled. Nobody tells procurement. Procurement keeps buying to the old spec, so the material's wrong on arrival. The factory needs three more months to remake it. Logistics expedites the replacement at a premium to save the date. Sales discounts the delay to keep the client. Every one of them technically did their job. The project ate the cost.</p>
-      </div>
-
-      <div class="box reveal in">
-        <div class="box-n">The accountability vacuum</div>
-        <div class="box-t">Everyone is innocent. The money is still gone.</div>
-        <p>When a shipment stalls or a margin drops, the fragmented structure hands everyone a perfect alibi. The carrier blames the broker. The broker blames the factory. Your team blames the macro environment. Nobody lied. You still got robbed.</p>
-      </div>
-    </div>
-
-    <p class="dagger reveal in">Fragmentation turns your overhead into a game of hot potato. Your profit is what's being tossed. <span class="end">Nobody's left holding responsibility — only your cash reserve.</span></p>
-  </div>
-</section>
-
-<!-- ============ RED TICKER — THE BLEED ============ -->
-<section class="bleed ticker ticker--red" aria-label="The cost of fragmentation, in figures">
-  <div class="track" id="redtrack"><span class="tick">the money's still gone</span><span class="sep">†</span><span class="tick"><span class="fig">$15.8 billion</span> bleeds out every year</span><span class="sep">†</span><span class="tick">the carrier blames the broker</span><span class="sep">†</span><span class="tick"><span class="fig">9 of 10</span> projects overrun. for <span class="fig">70 years</span>.</span><span class="sep">†</span><span class="tick">you called it specialization</span><span class="sep">†</span><span class="tick">owners eat <span class="fig">$10.6 billion</span> of it</span><span class="sep">†</span><span class="tick">the broker blames the factory</span><span class="sep">†</span><span class="tick">one missing signal cost the a380 <span class="fig">$6 billion</span></span><span class="sep">†</span><span class="tick">everyone hit their numbers. the deal lost money.</span><span class="sep">†</span><span class="tick">you built a circular firing squad</span><span class="sep">†</span><span class="tick"><span class="fig">18%</span> cost growth every time nobody owns the seam</span><span class="sep">†</span><span class="tick">change orders eat <span class="fig">25%</span> of a distressed job</span><span class="sep">†</span><span class="tick">your team blames the economy</span><span class="sep">†</span><span class="tick"><span class="fig">half</span> your plan won't happen. that's the average.</span><span class="sep">†</span><span class="tick">nobody lied. you still got robbed.</span><span class="sep">†</span><span class="tick">every rfi: <span class="fig">$1,080</span> and <span class="fig">two weeks</span> gone</span><span class="sep">†</span><span class="tick">specialization was supposed to make you efficient</span><span class="sep">†</span><span class="tick">the factory blames the port</span><span class="sep">†</span><span class="tick">it sits at the terminal racking fees while you discount the sale</span><span class="sep">†</span><span class="tick">rework quietly bills you <span class="fig">6%</span> of the job</span><span class="sep">†</span><span class="tick">you thought you built an elite network</span><span class="sep">†</span><span class="tick">a dispute you could have prevented runs <span class="fig">16 months</span></span><span class="sep">†</span><span class="tick">managing the chaos felt safer than ending it</span><span class="sep">†</span><span class="tick">everyone had a perfect alibi</span><span class="sep">†</span><span class="tick">the seam is where your margin goes to die</span><span class="sep">†</span><span class="tick">the money's still gone</span><span class="sep">†</span><span class="tick"><span class="fig">$15.8 billion</span> bleeds out every year</span><span class="sep">†</span><span class="tick">the carrier blames the broker</span><span class="sep">†</span><span class="tick"><span class="fig">9 of 10</span> projects overrun. for <span class="fig">70 years</span>.</span><span class="sep">†</span><span class="tick">you called it specialization</span><span class="sep">†</span><span class="tick">owners eat <span class="fig">$10.6 billion</span> of it</span><span class="sep">†</span><span class="tick">the broker blames the factory</span><span class="sep">†</span><span class="tick">one missing signal cost the a380 <span class="fig">$6 billion</span></span><span class="sep">†</span><span class="tick">everyone hit their numbers. the deal lost money.</span><span class="sep">†</span><span class="tick">you built a circular firing squad</span><span class="sep">†</span><span class="tick"><span class="fig">18%</span> cost growth every time nobody owns the seam</span><span class="sep">†</span><span class="tick">change orders eat <span class="fig">25%</span> of a distressed job</span><span class="sep">†</span><span class="tick">your team blames the economy</span><span class="sep">†</span><span class="tick"><span class="fig">half</span> your plan won't happen. that's the average.</span><span class="sep">†</span><span class="tick">nobody lied. you still got robbed.</span><span class="sep">†</span><span class="tick">every rfi: <span class="fig">$1,080</span> and <span class="fig">two weeks</span> gone</span><span class="sep">†</span><span class="tick">specialization was supposed to make you efficient</span><span class="sep">†</span><span class="tick">the factory blames the port</span><span class="sep">†</span><span class="tick">it sits at the terminal racking fees while you discount the sale</span><span class="sep">†</span><span class="tick">rework quietly bills you <span class="fig">6%</span> of the job</span><span class="sep">†</span><span class="tick">you thought you built an elite network</span><span class="sep">†</span><span class="tick">a dispute you could have prevented runs <span class="fig">16 months</span></span><span class="sep">†</span><span class="tick">managing the chaos felt safer than ending it</span><span class="sep">†</span><span class="tick">everyone had a perfect alibi</span><span class="sep">†</span><span class="tick">the seam is where your margin goes to die</span><span class="sep">†</span></div>
-</section>
-
-<!-- ============ INTERVENTION ============ -->
-<section class="section intervention" aria-labelledby="int-h">
-  <div class="wrap">
-    <div class="suture-art draw reveal in" aria-hidden="true">
-      <svg viewBox="0 0 520 150" fill="none">
-        <line x1="0" y1="75" x2="150" y2="75" stroke="var(--line-strong)" stroke-width="1" style="--len:150"></line>
-        <line x1="370" y1="75" x2="520" y2="75" stroke="var(--line-strong)" stroke-width="1" style="--len:150"></line>
-        <circle cx="260" cy="75" r="7" fill="var(--suture)"></circle>
-        <path d="M253 75 C220 60,190 66,150 75" stroke="var(--suture-lit)" stroke-width="1.5" style="--len:130"></path>
-        <path d="M255 80 C224 96,192 92,150 82" stroke="var(--suture-lit)" stroke-width="1.5" style="--len:130"></path>
-        <path d="M267 75 C300 60,332 66,370 75" stroke="var(--suture-lit)" stroke-width="1.5" style="--len:130"></path>
-        <path d="M265 80 C298 96,334 92,370 82" stroke="var(--suture-lit)" stroke-width="1.5" style="--len:130"></path>
-        <path d="M260 68 C250 44,246 30,250 14" stroke="var(--suture-lit)" stroke-width="1.3" style="--len:70"></path>
-        <path d="M260 82 C270 108,266 124,262 138" stroke="var(--suture-lit)" stroke-width="1.3" style="--len:70"></path>
-        <circle cx="150" cy="75" r="2.4" fill="var(--suture-lit)"></circle>
-        <circle cx="370" cy="75" r="2.4" fill="var(--suture-lit)"></circle>
-      </svg>
-    </div>
-
-    <p class="eyebrow eyebrow--suture">The Intervention</p>
-    <p class="lede reveal in">When your teams are pointing fingers and your profit is slipping through the seams, you do not need more advice. You need an intervention.</p>
-    <p class="lede reveal in">You need a singular, unyielding presence to step into the breach, seize the chaos, and impose structural order.</p>
-    <p class="that-is reveal in">That is <span class="name">KIT55 SOMA.</span></p>
-    <p class="reveal in">We enter with zero corporate noise and the deliberate force required to find every place you are bleeding and stop it for good.</p>
-    <p class="eliminate reveal in">We do not negotiate between your siloed entities — whether those entities sit in different departments, different sites, or different countries. We eliminate the space between them.</p>
-  </div>
-</section>
-
-<!-- seam divider: sutured -->
-<div class="seam wrap" aria-hidden="true">
-  <svg viewBox="0 0 760 40" preserveAspectRatio="none">
-    <line x1="0" y1="20" x2="352" y2="20" stroke="var(--line-strong)" stroke-width="1"></line>
-    <line x1="408" y1="20" x2="760" y2="20" stroke="var(--line-strong)" stroke-width="1"></line>
-    <path d="M352 20 C368 12,392 12,408 20" stroke="var(--suture-lit)" stroke-width="1.3"></path>
-    <path d="M352 20 C368 28,392 28,408 20" stroke="var(--suture-lit)" stroke-width="1.3"></path>
-    <circle cx="380" cy="20" r="2.2" fill="var(--suture-lit)"></circle>
-  </svg>
-</div>
-
-<!-- ============ CAMPAIGN ============ -->
-<section class="section campaign" aria-labelledby="camp-h">
-  <div class="wrap">
-    <p class="eyebrow eyebrow--suture">The Terms of Engagement</p>
-    <div class="campaign-intro">
-      <p class="reveal in">KIT55 SOMA does not blend into your corporate background. We do not join committees. We do not play internal politics. We do not write slide decks to justify our presence.</p>
-      <p class="reveal in">We operate with structural precision and unyielding force. We enter with one objective: to locate every fissure where your capital is buried, exhume the truth, and lock down the execution perimeter.</p>
-      <p class="reveal in" style="color:var(--bone);">This is not a collaborative brainstorming exercise. This is operational resilience engineering.</p>
-    </div>
-
-    <div class="stages">
-      <div class="stage reveal in">
-        <div class="stage-n">01</div>
-        <div>
-          <div class="stage-t">Forensic Detection</div>
-          <p>We audit the seams. We map the exact handoffs between procurement, cross-border logistics, and your commercial teams to find where data drops and money leaks. <span class="edge">Cross-border is the seam most operators cannot reach. KIT55 SOMA operates on both sides of it</span> — in language, in relationship — where the documentation and the timing actually disappear. If an entity or a vendor has been hiding behind an operational blind spot, we expose the fissure.</p>
-        </div>
-      </div>
-      <div class="stage reveal in">
-        <div class="stage-n">02</div>
-        <div>
-          <div class="stage-t">Execution Alignment</div>
-          <p>We forcefully close the gaps. We bridge the disconnect between your sales promises and your physical execution capability. <span class="edge">We kill the storage fees and the local-optimization traps that make every entity look efficient while the transaction loses money.</span> The isolated fiefdoms are dismantled and integrated into a single, synchronized engine engineered to protect your total margin.</p>
-        </div>
-      </div>
-      <div class="stage reveal in">
-        <div class="stage-n">03</div>
-        <div>
-          <div class="stage-t">Infrastructure Hardening</div>
-          <p>We build the permanent fortress. We do not patch leaks for the quarter. We engineer the operational architecture, vet the subcontractor networks, and harden the supply-chain pipelines <span class="edge">so fragmentation can never take root again.</span></p>
-        </div>
-      </div>
-    </div>
-
-    <div class="sovereign reveal in">
-      <p class="eyebrow eyebrow--suture">The Sovereign Standard</p>
-      <p>We do not create dependency. Our success is measured by the absolute autonomy of the systems we leave behind. We establish order. We embed the engineered infrastructure. We exit — leaving your P&amp;L insulated against the chaos of the market.</p>
-    </div>
-  </div>
-</section>
-
-<!-- ============ GREEN TICKER — THE CURE ============ -->
-<section class="bleed ticker ticker--green" aria-label="The proof that alignment works, with sources">
-  <div class="track" id="greentrack"><span class="tick">$15.8B bled yearly from bad handoffs <span class="cite">— NIST, US Dept of Commerce</span></span><span class="sep">+</span><span class="tick">fix the seam and cost growth drops from 18% to 4% <span class="cite">— CII, 46 megaprojects</span></span><span class="sep">+</span><span class="tick">23% fewer medical errors when the handoff is owned <span class="cite">— NEJM, 2014</span></span><span class="sep">+</span><span class="tick">one source of truth. the a380 proved the $6B cost of skipping it <span class="cite">— Airbus, 2006</span></span><span class="sep">+</span><span class="tick">9 of 10 megaprojects overrun. the aligned ones don't <span class="cite">— Flyvbjerg, Oxford</span></span><span class="sep">+</span><span class="tick">BP Andrew: £80M under budget, six months early <span class="cite">— North Sea alliance, 1996</span></span><span class="sep">+</span><span class="tick">Toyota's aligned suppliers: 50% fewer defects <span class="cite">— Dyer &amp; Nobeoka, 2000</span></span><span class="sep">+</span><span class="tick">preventable harm cut 30% by one shared protocol <span class="cite">— NEJM, 2014</span></span><span class="sep">+</span><span class="tick">Virginia-class subs: 30% cheaper on a single database <span class="cite">— US Navy program</span></span><span class="sep">+</span><span class="tick">target the cost up front, land 15% under market <span class="cite">— Ballard, 2012</span></span><span class="sep">+</span><span class="tick">dispute boards cut overruns nearly in half <span class="cite">— ASCE, ~3,000 projects</span></span><span class="sep">+</span><span class="tick">reference-class forecasting, now mandated <span class="cite">— UK Treasury</span></span><span class="sep">+</span><span class="tick">75% less inventory when the network shares one truth <span class="cite">— Dyer &amp; Nobeoka, 2000</span></span><span class="sep">+</span><span class="tick">integrated delivery beat traditional on 14 metrics <span class="cite">— El Asmar, ASCE 2013</span></span><span class="sep">+</span><span class="tick">Toyota's suppliers: 124% more output per hour <span class="cite">— Strategic Management Journal</span></span><span class="sep">+</span><span class="tick">dispute boards: 98% never reach arbitration <span class="cite">— Dispute Resolution Board Fdn.</span></span><span class="sep">+</span><span class="tick">3.5% contingency under target costing, vs 7.9% <span class="cite">— Do et al, 2014</span></span><span class="sep">+</span><span class="tick">the aligned North Sea field was called uneconomic for 20 years <span class="cite">— BP Andrew</span></span><span class="sep">+</span><span class="tick">$15.8B bled yearly from bad handoffs <span class="cite">— NIST, US Dept of Commerce</span></span><span class="sep">+</span><span class="tick">fix the seam and cost growth drops from 18% to 4% <span class="cite">— CII, 46 megaprojects</span></span><span class="sep">+</span><span class="tick">23% fewer medical errors when the handoff is owned <span class="cite">— NEJM, 2014</span></span><span class="sep">+</span><span class="tick">one source of truth. the a380 proved the $6B cost of skipping it <span class="cite">— Airbus, 2006</span></span><span class="sep">+</span><span class="tick">9 of 10 megaprojects overrun. the aligned ones don't <span class="cite">— Flyvbjerg, Oxford</span></span><span class="sep">+</span><span class="tick">BP Andrew: £80M under budget, six months early <span class="cite">— North Sea alliance, 1996</span></span><span class="sep">+</span><span class="tick">Toyota's aligned suppliers: 50% fewer defects <span class="cite">— Dyer &amp; Nobeoka, 2000</span></span><span class="sep">+</span><span class="tick">preventable harm cut 30% by one shared protocol <span class="cite">— NEJM, 2014</span></span><span class="sep">+</span><span class="tick">Virginia-class subs: 30% cheaper on a single database <span class="cite">— US Navy program</span></span><span class="sep">+</span><span class="tick">target the cost up front, land 15% under market <span class="cite">— Ballard, 2012</span></span><span class="sep">+</span><span class="tick">dispute boards cut overruns nearly in half <span class="cite">— ASCE, ~3,000 projects</span></span><span class="sep">+</span><span class="tick">reference-class forecasting, now mandated <span class="cite">— UK Treasury</span></span><span class="sep">+</span><span class="tick">75% less inventory when the network shares one truth <span class="cite">— Dyer &amp; Nobeoka, 2000</span></span><span class="sep">+</span><span class="tick">integrated delivery beat traditional on 14 metrics <span class="cite">— El Asmar, ASCE 2013</span></span><span class="sep">+</span><span class="tick">Toyota's suppliers: 124% more output per hour <span class="cite">— Strategic Management Journal</span></span><span class="sep">+</span><span class="tick">dispute boards: 98% never reach arbitration <span class="cite">— Dispute Resolution Board Fdn.</span></span><span class="sep">+</span><span class="tick">3.5% contingency under target costing, vs 7.9% <span class="cite">— Do et al, 2014</span></span><span class="sep">+</span><span class="tick">the aligned North Sea field was called uneconomic for 20 years <span class="cite">— BP Andrew</span></span><span class="sep">+</span></div>
-</section>
-
-<!-- ============ YOUR MOVE ============ -->
-<section class="section move" aria-labelledby="move-h">
-  <div class="wrap">
-    <p class="reveal in"><span class="known">You already know where it hurts. You have known for quarters.</span></p>
-    <p class="reveal in">The only question left is whether you will keep blaming the market, or finally let someone stop the bleed. Every day you spend tolerating the friction is a day you choose to lose capital. The operational fissures are wide open, and your entities are running out of alibis.</p>
-    <p class="reveal in">We do not accept every engagement. We only step into operations where the leadership is ready to trade the chaos for command.</p>
-    <p class="verdict reveal in" id="move-h"><span class="open">The seam is open.</span>Your move.</p>
-    <div class="offer reveal in">
-      <p class="offer-h">The Forensic Assessment</p>
-      <p>Ten working days. One live program. We map every handoff, quantify the bleed in dollars and days, and hand you a written execution perimeter you can run with us or without us.</p>
-      <p class="terms">Fixed fee. No retainer. No deck.</p>
-    </div>
-    <div class="cta-row reveal in">
-      <a class="cta" href="mailto:office@kit55soma.com?subject=Forensic%20Assessment" aria-label="Request the forensic assessment by email">
-        Request the Forensic Assessment
-        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-      </a>
-      <a class="cta-alt" href="tel:+18587442700">Or call 858-744-2700</a>
-    </div>
-  </div>
-</section>
-
-</main>
-
-<!-- ============ FOOTER ============ -->
-<footer class="foot">
-  <div class="wrap foot-row">
-    <a class="brand" href="https://federicoleff.com/#top" aria-label="KIT55 SOMA">
-      <svg class="mark" width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <circle cx="9" cy="17" r="4" stroke="#EAE4D7" stroke-width="1.5"></circle>
-      <circle cx="25" cy="17" r="4" stroke="#EAE4D7" stroke-width="1.5"></circle>
-      <path d="M13 17 L21 17" stroke="#66A98A" stroke-width="1.8" stroke-linecap="round"></path>
-      <path d="M15 14 L13 17 L15 20" stroke="#66A98A" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path>
-      <path d="M19 14 L21 17 L19 20" stroke="#66A98A" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path>
-    </svg>
-      <span class="wm-stack">
-        <span class="wm-1">KIT55</span>
-        <span class="wm-2">SOMA</span>
-      </span>
+  <header class="site-header" data-header>
+    <a class="brand" href="#top" aria-label="KIT55 Soma, back to top">
+      <img src="logo-mark.svg" alt="" width="48" height="48">
+      <span class="brand-type"><strong>KIT55</strong><small>SOMA</small></span>
     </a>
-    <div class="foot-meta">
-      Cross-border operations · Supply-chain integration<br>
-      <a class="foot-link" href="mailto:office@kit55soma.com">office@kit55soma.com</a> · <a class="foot-link" href="tel:+18587442700">858-744-2700</a>
-    </div>
-    <span class="foot-cited">Every figure on this site is public record. Sources cited inline.</span>
+    <div class="header-line" aria-hidden="true"></div>
+    <a class="header-cta" href="#your-move">Let’s talk <span aria-hidden="true">↘</span></a>
+  </header>
 
-  <!-- 
-    HIDDEN MEDIA SQUARE (PRIVATE)
-    Only you can edit this. 
-    It is completely invisible on the live site.
-    To activate: 
-    1. Paste your video or note inside the div below
-    2. Change display:none to display:block
-    3. Commit
-  -->
-  <div id="hidden-media-square" class="hidden-media-square" style="display:none;">
-    <!-- Your private content goes here -->
-  </div>
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="hero-network" aria-hidden="true">
+        <svg viewBox="0 0 900 900" role="presentation">
+          <g class="network-lines">
+            <path d="M116 110C250 130 258 280 404 344"/>
+            <path d="M40 266C214 240 286 314 404 384"/>
+            <path d="M72 464C238 430 290 426 404 426"/>
+            <path d="M108 690C246 612 298 514 418 472"/>
+            <path d="M216 824C292 664 336 558 450 492"/>
+          </g>
+          <g class="network-nodes">
+            <circle cx="116" cy="110" r="10"/><circle cx="40" cy="266" r="10"/>
+            <circle cx="72" cy="464" r="10"/><circle cx="108" cy="690" r="10"/>
+            <circle cx="216" cy="824" r="10"/>
+          </g>
+          <circle class="soma-ring" cx="472" cy="430" r="72"/>
+          <circle class="soma-core" cx="472" cy="430" r="42"/>
+          <path class="axon" d="M544 430H846"/>
+          <circle class="signal" cx="846" cy="430" r="13"/>
+        </svg>
+      </div>
+      <div class="hero-copy">
+        <p class="kicker">Organizational engineering for fragmented enterprises.</p>
+        <h1 id="hero-title">Your company<br>has lost <em>control.</em></h1>
+        <div class="hero-verdict">
+          <p>It will not correct itself.</p>
+          <p>When it fails, responsibility will be yours.</p>
+        </div>
+      </div>
+      <div class="hero-index" aria-hidden="true">
+        <span>01</span><span>11</span>
+      </div>
+      <a class="scroll-cue" href="#fragmentation">Read the case <span aria-hidden="true">↓</span></a>
+    </section>
 
-  </div>
-</footer>
+    <section class="chapter light" id="fragmentation" aria-labelledby="fragmentation-title">
+      <div class="chapter-rail">
+        <span class="chapter-number">02</span>
+        <span class="chapter-rule"></span>
+        <span class="chapter-label">The fragmentation trap</span>
+      </div>
+      <article class="prose">
+        <h2 id="fragmentation-title">The Work No Longer Lives in One Place</h2>
+        <p class="lead">Some of us remember vertically integrated operations.</p>
+        <p>One roof. One payroll. One company carrying everything it needed to function. The people connecting sales, procurement, production, and execution were part of the same organism.</p>
+        <p>The incentive did not need to be explained. If the company won, everyone won. If it failed, everyone felt it.</p>
+        <p>It did not happen all at once.</p>
+        <p>One function was carved out because it was “not core.” Another was handed to a specialist who promised it could be done faster, cheaper, and with more expertise. Then another.</p>
+        <p>Each decision made sense in isolation. Each one improved a number. Sometimes that number mattered more than the system it was being removed from.</p>
+        <p>Over time, the functions did not disappear. They moved.</p>
+        <p>What had been one vertically integrated operation became a network of separate entities, each responsible for a defined part of the work.</p>
+        <p class="standalone">That is fragmentation.</p>
+        <p class="closing-line">They called it efficiency through specialization.</p>
+      </article>
+    </section>
 
-<script>
-/* ---- ticker content ---- */
-var red = [
-  {t:"the money's still gone"},
-  {t:"$15.8 billion bleeds out every year",fig:["$15.8 billion"]},
-  {t:"the carrier blames the broker"},
-  {t:"9 of 10 projects overrun. for 70 years.",fig:["9 of 10","70 years"]},
-  {t:"you called it specialization"},
-  {t:"owners eat $10.6 billion of it",fig:["$10.6 billion"]},
-  {t:"the broker blames the factory"},
-  {t:"one missing signal cost the a380 $6 billion",fig:["$6 billion"]},
-  {t:"everyone hit their numbers. the deal lost money."},
-  {t:"you built a circular firing squad"},
-  {t:"18% cost growth every time nobody owns the seam",fig:["18%"]},
-  {t:"change orders eat 25% of a distressed job",fig:["25%"]},
-  {t:"your team blames the economy"},
-  {t:"half your plan won't happen. that's the average.",fig:["half"]},
-  {t:"nobody lied. you still got robbed."},
-  {t:"every rfi: $1,080 and two weeks gone",fig:["$1,080","two weeks"]},
-  {t:"specialization was supposed to make you efficient"},
-  {t:"the factory blames the port"},
-  {t:"it sits at the terminal racking fees while you discount the sale"},
-  {t:"rework quietly bills you 6% of the job",fig:["6%"]},
-  {t:"you thought you built an elite network"},
-  {t:"a dispute you could have prevented runs 16 months",fig:["16 months"]},
-  {t:"managing the chaos felt safer than ending it"},
-  {t:"everyone had a perfect alibi"},
-  {t:"the seam is where your margin goes to die"}
-];
+    <section class="chapter dark" id="specialization" aria-labelledby="specialization-title">
+      <div class="chapter-rail">
+        <span class="chapter-number">03</span>
+        <span class="chapter-rule"></span>
+        <span class="chapter-label">The illusion of specialization</span>
+      </div>
+      <article class="prose">
+        <h2 id="specialization-title">The Promise of Specialization</h2>
+        <p class="lead">For a while, it looked as if we had created a world of genius principals.</p>
+        <p>Valuations climbed. Trades specialized, then became businesses in their own right.</p>
+        <p>The load seemed lighter.</p>
+        <p>It was an intoxicating idea: keep only what made you exceptional. Starting with the brand. Let someone else carry everything else.</p>
+        <p>Why build and carry a capability when you could buy it only when you needed it? Why absorb the payroll, overhead, inventory, infrastructure, and liability of work another company had built its entire existence around performing?</p>
+        <p>A company could retain a smaller core, assemble the rest from specialists, and still appear larger, faster, and more capable than the organization it had replaced.</p>
+        <p>Every function declared its independence.</p>
+        <p>Expertise could be brought in by the engagement. Capacity could appear when demand appeared, then disappear from the books when it did not.</p>
+        <p>The numbers told the story. Fixed cost became variable. Headcount fell. Cash was no longer tied up in capability waiting for demand. The balance sheet looked cleaner. The company looked leaner, sharper, and more valuable.</p>
+        <p>This was not incompetence. It was not laziness.</p>
+        <p class="closing-line">At first, it was indistinguishable from genius.</p>
+      </article>
+    </section>
 
-var green = [
-  {t:"$15.8B bled yearly from bad handoffs",c:"NIST, US Dept of Commerce"},
-  {t:"fix the seam and cost growth drops from 18% to 4%",c:"CII, 46 megaprojects"},
-  {t:"23% fewer medical errors when the handoff is owned",c:"NEJM, 2014"},
-  {t:"one source of truth. the a380 proved the $6B cost of skipping it",c:"Airbus, 2006"},
-  {t:"9 of 10 megaprojects overrun. the aligned ones don't",c:"Flyvbjerg, Oxford"},
-  {t:"BP Andrew: £80M under budget, six months early",c:"North Sea alliance, 1996"},
-  {t:"Toyota's aligned suppliers: 50% fewer defects",c:"Dyer & Nobeoka, 2000"},
-  {t:"preventable harm cut 30% by one shared protocol",c:"NEJM, 2014"},
-  {t:"Virginia-class subs: 30% cheaper on a single database",c:"US Navy program"},
-  {t:"target the cost up front, land 15% under market",c:"Ballard, 2012"},
-  {t:"dispute boards cut overruns nearly in half",c:"ASCE, ~3,000 projects"},
-  {t:"reference-class forecasting, now mandated",c:"UK Treasury"},
-  {t:"75% less inventory when the network shares one truth",c:"Dyer & Nobeoka, 2000"},
-  {t:"integrated delivery beat traditional on 14 metrics",c:"El Asmar, ASCE 2013"},
-  {t:"Toyota's suppliers: 124% more output per hour",c:"Strategic Management Journal"},
-  {t:"dispute boards: 98% never reach arbitration",c:"Dispute Resolution Board Fdn."},
-  {t:"3.5% contingency under target costing, vs 7.9%",c:"Do et al, 2014"},
-  {t:"the aligned North Sea field was called uneconomic for 20 years",c:"BP Andrew"}
-];
+    <section class="chapter redline" id="control" aria-labelledby="control-title">
+      <div class="chapter-rail">
+        <span class="chapter-number">04</span>
+        <span class="chapter-rule"></span>
+        <span class="chapter-label">Where control dies</span>
+      </div>
+      <article class="prose">
+        <h2 id="control-title">Where Control Dies</h2>
+        <p class="lead">The signal has not changed. The pathways have.</p>
+        <p>The company still owes the same promise it always did: serve the customer, protect the margin, deliver the work, grow the enterprise.</p>
+        <p>That promise was built for a company operating as one system.</p>
+        <p>But once the work belongs to separate systems, every participant begins living under a different definition of success.</p>
+        <p class="commands"><span>Increase your margin.</span><span>Shape your scope.</span><span>Protect your time.</span><span>Guard your information.</span><span>Shield yourself from blame.</span></p>
+        <p>None of those instincts are irrational. Each one makes sense inside the mandate that produced it.</p>
+        <p>The company, however, is still accountable for one outcome.</p>
+        <p>Everyone else is accountable for a part.</p>
+        <p>Every participant can be right. The company can still be wrong.</p>
+        <blockquote>Control does not die in one event. It dies through a thousand rational acts.</blockquote>
+      </article>
+    </section>
 
-function esc(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
-function fig(text,figs){
-  var out = esc(text);
-  if(figs){figs.forEach(function(f){out = out.replace(esc(f),'<span class="fig">'+esc(f)+'</span>');});}
-  return out;
-}
+    <section class="chapter blackhole" id="cost" aria-labelledby="cost-title">
+      <div class="chapter-rail">
+        <span class="chapter-number">05</span>
+        <span class="chapter-rule"></span>
+        <span class="chapter-label">The cost nobody carries</span>
+      </div>
+      <article class="prose">
+        <h2 id="cost-title">The Cost Nobody Carries</h2>
+        <p class="lead">As every company, function, and specialist deepened its domain, its boundaries grew tighter. What was once a colleague became a counterparty. What was once a shared obligation became a negotiated scope of work.</p>
+        <p>Every entity knew where its responsibility began.</p>
+        <p>More importantly, it knew where it ended.</p>
+        <p>Between those rigid boundaries, a space appeared. It had no owner, no budget, and no visibility. On paper, every box had a name and every obligation was assigned.</p>
+        <p class="standalone">Reality does not operate on paper.</p>
+        <p>Between one party finishing its job and another receiving it lies a distance no contract can eliminate. Context must travel. Assumptions must be tested. Someone must own the whole.</p>
+        <p>At first, participants encountered this space as a problem.</p>
+        <p>Then they realized it was a shelter.</p>
+        <p>The disconnect did more than obstruct coordination.</p>
+        <p class="standalone">It provided cover.</p>
+        <p>A missed handoff becomes a debate over incomplete data. An untested assumption becomes a dispute over someone else's scope. A decision made in a vacuum produces chaos three steps downstream, far beyond the perimeter of the person who made it.</p>
+        <p>No one has to lie.</p>
+        <p>Everyone simply retreats behind the limits of their mandate.</p>
+        <p class="closing-line">The deeper the failure traveled, the cleaner everyone's hands became.</p>
+        <div class="void-statement">
+          <p>That is what makes this space a black hole.</p>
+          <p>Not because the cost disappears.</p>
+          <p>The cost always returns.</p>
+          <p><strong>What disappears is its origin.</strong></p>
+        </div>
+        <p>The handoff never occurs. The project drifts. The launch arrives on schedule, exactly according to plan, in a market that was never prepared for it and an operation that cannot support it.</p>
+        <p>Leadership, sales, and investors celebrate paper milestones while operating on expired assumptions—discovering reality long after the window to act has closed.</p>
+        <p>The damage accumulates in plain sight.</p>
+        <p>The consequence survives.</p>
+        <p>Accountability does not.</p>
+        <p>The supplier protects its margin. The contractor protects its scope. The carrier bills for the expedite. The department celebrates coming in under budget while the enterprise pays for everything the budget excluded.</p>
+        <p>Every party acts rationally. Every party gets paid. Every local P&amp;L looks immaculate.</p>
+        <p>Then the enterprise closes its books and discovers millions missing inside a collection of perfectly defensible numbers. No one stole the money. It was simply ground down into expedites, rework, concessions, missed launches, and customers who quietly left.</p>
+        <p>There is no line item for <em>the cost of work nobody owned.</em></p>
+        <p class="final-pair"><span>Everyone protected their margin.</span><strong>No one protected the margin.</strong></p>
+      </article>
+    </section>
 
-function buildRed(){
-  var html='';
-  for(var pass=0;pass<2;pass++){
-    red.forEach(function(item){
-      html+='<span class="tick">'+fig(item.t,item.fig)+'</span><span class="sep">&#8224;</span>';
-    });
-  }
-  return html;
-}
-function buildGreen(){
-  var html='';
-  for(var pass=0;pass<2;pass++){
-    green.forEach(function(item){
-      html+='<span class="tick">'+esc(item.t)+' <span class="cite">— '+esc(item.c)+'</span></span><span class="sep">+</span>';
-    });
-  }
-  return html;
-}
-document.getElementById('redtrack').innerHTML = buildRed();
-document.getElementById('greentrack').innerHTML = buildGreen();
+    <section class="receipts" aria-labelledby="receipts-title">
+      <div class="receipts-heading">
+        <p class="kicker">The evidence entered into the record</p>
+        <h2 id="receipts-title">The Receipts</h2>
+      </div>
+      <div class="receipt-field">
+        <a class="receipt" href="https://www.nist.gov/publications/cost-analysis-inadequate-interoperability-us-capital-facilities-industry" target="_blank" rel="noopener">
+          <span class="receipt-id">NIST / 2004</span>
+          <strong>$15.8B</strong>
+          <p>Annual cost of inadequate interoperability in the U.S. capital-facilities industry.</p>
+          <span class="source">Open the source ↗</span>
+        </a>
+        <a class="receipt" href="https://nvlpubs.nist.gov/nistpubs/gcr/2004/nist.gcr.04-867.pdf" target="_blank" rel="noopener">
+          <span class="receipt-id">NIST / GCR 04-867</span>
+          <strong>1–2%</strong>
+          <p>Share of industry revenue consumed by measured interoperability failures—with opportunity costs excluded.</p>
+          <span class="source">Read the report ↗</span>
+        </a>
+        <a class="receipt" href="https://ora.ox.ac.uk/objects/uuid%3A1995349e-a5c7-4d85-98f4-d0c00cce2d75/files/mc585fe9f557b210e51b0014842bbea6b" target="_blank" rel="noopener">
+          <span class="receipt-id">Oxford / Flyvbjerg</span>
+          <strong>86%</strong>
+          <p>Transportation infrastructure projects in the dataset that experienced cost overrun—nine out of ten when rounded.</p>
+          <span class="source">Open the paper ↗</span>
+        </a>
+      </div>
+      <p class="receipt-note">Different industries. Same recurring tax on broken continuity.</p>
+    </section>
 
-/* ---- sticky bar state ---- */
-var bar=document.getElementById('topbar');
-function onScroll(){ if(window.scrollY>40){bar.classList.add('scrolled');}else{bar.classList.remove('scrolled');} }
-window.addEventListener('scroll',onScroll,{passive:true}); onScroll();
+    <section class="indictment" id="fracture" aria-labelledby="fracture-title">
+      <div class="indictment-mark" aria-hidden="true"><img src="logo-mark.svg" alt=""></div>
+      <article>
+        <p class="kicker">06 / It built around the fracture</p>
+        <h2 id="fracture-title">The enterprise is not going back.</h2>
+        <p>It did not repair the fracture. It built its future around it.</p>
+        <p>Functions became firms. Capabilities became markets. The payroll became a supply chain.</p>
+        <p>Fragmentation is no longer a strategy. It is the operating environment.</p>
+        <p class="standalone">This is here to stay.</p>
+        <p>The enterprise remains fully accountable for the outcome.</p>
+        <p>It systematically surrendered the means of controlling it.</p>
+        <p class="closing-line">Then it called the surrender efficiency.</p>
+      </article>
+    </section>
 
-/* ---- reveal on scroll ---- */
-var io=new IntersectionObserver(function(entries){
-  entries.forEach(function(e){
-    if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}
-  });
-},{threshold:0.16,rootMargin:'0px 0px -8% 0px'});
-document.querySelectorAll('.reveal,.draw').forEach(function(el){io.observe(el);});
-</script>
+    <section class="chapter light principal" id="exposure" aria-labelledby="exposure-title">
+      <div class="chapter-rail">
+        <span class="chapter-number">07</span>
+        <span class="chapter-rule"></span>
+        <span class="chapter-label">The principal’s exposure</span>
+      </div>
+      <article class="prose">
+        <h2 id="exposure-title">The Principal's Exposure</h2>
+        <p class="lead">An enterprise can surrender control. Its principal cannot surrender accountability.</p>
+        <p>At the end of every fragmented chain stands one person whose name remains attached to the whole.</p>
+        <p>The customer did not buy a collection of scopes. The investor did not fund a series of departments. The board did not approve a network of explanations.</p>
+        <p class="standalone">They were promised an outcome.</p>
+        <p>Yet the principal attempts to govern through a system that reports vertically while failure moves horizontally. Every dashboard watches a box. The damage moves between them.</p>
+        <p>By the time the signal reaches the principal, its cause has dissolved. What arrives is pure consequence: the missed date, the lost account, the stalled project, the margin erosion, the investor demanding an answer no one below is equipped to give.</p>
+        <p>This is the principal's exposure: full accountability for an outcome assembled beyond their visibility and control.</p>
+        <p>That explains the exposure.</p>
+        <p class="standalone">It does not excuse the posture.</p>
+        <p>The first breakdown may be an accident. Repetition is a pattern. Eventually, continuing not to know becomes a leadership decision.</p>
+        <div class="defenses">
+          <p><strong>“The vendor failed”</strong> is not a defense. It is an admission that you entrusted the outcome to a counterparty you never learned to govern.</p>
+          <p><strong>“My team did not tell me”</strong> is not a defense. It is confirmation that your information architecture failed precisely when you needed it most.</p>
+          <p><strong>“It was outside our scope”</strong> is not a defense. It is the exact location of your failure.</p>
+        </div>
+        <p>Once the fracture is visible, passive observation is an affirmative choice.</p>
+        <p>A principal can delegate every function in the enterprise. They cannot delegate the obligation to make those distinct functions deliver a coherent result.</p>
+        <p class="final-pair"><span>Everyone below has a scope.</span><strong>The principal owns the outcome.</strong></p>
+      </article>
+    </section>
 
+    <section class="chapter intervention" id="intervention" aria-labelledby="intervention-title">
+      <div class="chapter-rail">
+        <span class="chapter-number">08</span>
+        <span class="chapter-rule"></span>
+        <span class="chapter-label">The intervention</span>
+      </div>
+      <article class="prose">
+        <h2 id="intervention-title">The Intervention</h2>
+        <p class="lead">The principal cannot reverse the world that created this exposure.</p>
+        <p>They do not need to.</p>
+        <p>The answer is not to drag every function back onto the payroll, rebuild abandoned departments, or reconstruct an operating model the market has already replaced.</p>
+        <p class="standalone">Control does not require owning every part.</p>
+        <p class="standalone accent">It requires owning the connections between them.</p>
+        <p>What vertical integration provided was not proximity.</p>
+        <p>It was continuity.</p>
+        <p>Information traveled with the execution, consequences remained pinned to decisions, and someone could trace the promise from origin to outcome.</p>
+        <p class="standalone">That continuity can be restored.</p>
+        <p>Not by adding another box to the organization chart. Not by paying for a diagnosis that names the problem and leaves it exactly where it found it. Not by drafting another scope that ends exactly where the failure begins.</p>
+        <p class="standalone accent">Someone must enter no man's land.</p>
+        <p>Follow the signal across boundaries. Expose where information stopped, where assumptions escaped scrutiny, where responsibility dissolved, and where the consequence became separated from its cause.</p>
+        <p>Make the invisible visible.</p>
+        <p>Reconnect the decision to the damage.</p>
+        <p>Put hard ownership where explanation used to hide.</p>
+        <p class="standalone">This is the intervention.</p>
+        <p>It is not advice that ends at diagnosis.</p>
+        <p class="standalone accent">It is skin-in-the-game execution.</p>
+        <p>We do not believe full compensation is earned by naming a problem and transferring the burden of correction back to the client.</p>
+        <p>For KIT55 Soma, diagnosis does not close the engagement.</p>
+        <p>It opens the obligation.</p>
+        <p>That belief is not rhetorical.</p>
+        <p>We are prepared to put our compensation behind it.</p>
+        <p>The intervention does not replace your specialists. It forces distinct scopes to deliver a coherent result. It does not absorb every function. It restores the connective tissue that directs independent parts toward a shared outcome.</p>
+        <p>And it does not end with a report. It remains inside the corrective work until operational control is restored and the architecture holds without outside force.</p>
+        <p class="standalone">KIT55 Soma exists for that space.</p>
+        <blockquote>The work begins where everyone else decided their responsibility ended.</blockquote>
+      </article>
+    </section>
 
+    <section class="method" id="method" aria-labelledby="method-title">
+      <header class="method-intro">
+        <div>
+          <p class="kicker">09 / The method</p>
+          <h2 id="method-title">No two enterprises fracture in the exact same place.</h2>
+        </div>
+        <div class="method-opening">
+          <p>In one, information dies at the handoff. In another, authority dissolves between functions. In a third, every participant performs their contract to the letter while their combined execution destroys the outcome.</p>
+          <p>The failure site changes. The obligation does not.</p>
+          <p>We do not arrive with a universal template and force the enterprise to fit it. We identify the specific fracture, select the precise controls required to repair it, and install them directly where the work happens.</p>
+          <p><strong>The architecture is repeatable. The intervention is specific.</strong></p>
+          <p>The mechanisms themselves are not speculative. Closed-loop handoffs, explicit decision rights, visible dependencies, structured escalation, and disciplined debriefing are proven disciplines borrowed from flight decks, operating rooms, construction sites, and complex battlefields.</p>
+          <p>We did not invent the physics. We know how to put it to work inside a live enterprise.</p>
+        </div>
+      </header>
+      <div class="method-steps">
+        <article class="method-step">
+          <span>01</span><h3>Start with the Consequence</h3>
+          <p>We begin with what cannot be rationalized away: the missed date, the stalled launch, the lost account, the recurring expedite, the margin erosion no department can locate inside its own P&amp;L.</p>
+          <p>Then we trace it backward through every decision, assumption, dependency, and transfer of responsibility until the consequence is reconnected to its origin.</p>
+          <p><strong>We do not ask who failed. We determine where continuity broke.</strong></p>
+        </article>
+        <article class="method-step">
+          <span>02</span><h3>Expose the Operating Reality</h3>
+          <p>The org chart shows where people report. It does not show how the outcome travels.</p>
+          <p>We map the true operating picture between the boxes: what depends on what, which assumptions remain untested, where decisions stall, which commitments lack an owner, and what damage is already moving downstream.</p>
+          <p><strong>Not another passive dashboard describing what went wrong yesterday. A live capability to see what is about to fail while there is still time to intervene.</strong></p>
+        </article>
+        <article class="method-step">
+          <span>03</span><h3>Install Continuity</h3>
+          <p>Once the fracture is visible, we place direct ownership over it.</p>
+          <p>One shared outcome. One accountable owner. Clear decision rights. Defined escalation thresholds. Named response times. A predetermined response when silence replaces a decision.</p>
+          <p>Critical handoffs receive a sender, a receiver, the context required to act, explicit acceptance, and confirmation that responsibility actually crossed the border.</p>
+          <p><strong>Nothing is transferred merely because an email was sent.<br>Nothing is resolved merely because the meeting ended.</strong></p>
+        </article>
+        <article class="method-step">
+          <span>04</span><h3>Correct the System in Motion</h3>
+          <p>The controls are installed directly against live work.</p>
+          <p>Information is forced to travel with execution. Changed assumptions are immediately carried to everyone whose work depends on them. Local priorities are tested against the enterprise outcome. Variance is traced to origin before explanation has time to bury it.</p>
+          <p>The system is briefed, operated, challenged, corrected, and operated again.</p>
+          <p><strong>This is where operational discipline stops being a theory. It either survives contact with the live enterprise or it does not.</strong></p>
+        </article>
+        <article class="method-step">
+          <span>05</span><h3>Make the Correction Hold</h3>
+          <p>The intervention is not complete when KIT55 Soma understands the breakdown. It is complete when your enterprise controls the solution.</p>
+          <p>The correction is embedded into roles, agreements, meeting structures, incentives, escalation paths, and training. It is tested under load until the connections hold without outside intervention.</p>
+          <p class="method-manifesto"><span>The mechanisms are published.</span><span>The configuration is specific.</span><span>The execution is ours.</span><strong>The capability remains yours.</strong></p>
+        </article>
+      </div>
+    </section>
 
-</body></html>
+    <section class="proof" id="proof" aria-labelledby="proof-title">
+      <div class="proof-heading">
+        <p class="kicker">10 / The proof</p>
+        <h2 id="proof-title">We are not measured by what we recommend.<br><em>We are measured by what holds.</em></h2>
+      </div>
+      <article class="proof-copy">
+        <p>The method defines what we do. The standard determines whether any of it counts.</p>
+        <p>Activity is not progress. Visibility is not control. Agreement in the room is not execution in the field.</p>
+        <p>A handoff is not complete until it is received and accepted. A decision is not made until ownership of its consequence is clear. A correction is not installed until it survives pressure.</p>
+        <p>And the engagement is not finished until the enterprise can carry the result without us.</p>
+        <p>That standard is not philosophical.</p>
+        <p>It has been tested under real operating pressure.</p>
+      </article>
+      <div class="evidence">
+        <a href="https://www.nber.org/system/files/working_papers/w16658/w16658.pdf" target="_blank" rel="noopener" class="evidence-row">
+          <span class="evidence-place">India / Textile plants</span>
+          <strong>+17%</strong>
+          <p>Productivity in year one, with an estimated $325,000 in annual profitability per plant.</p>
+          <span aria-hidden="true">↗</span>
+        </a>
+        <a href="https://openknowledge.worldbank.org/server/api/core/bitstreams/8ad42a34-9ae6-4ee9-b499-33fda52bde0e/content" target="_blank" rel="noopener" class="evidence-row">
+          <span class="evidence-place">Colombia / Auto parts</span>
+          <strong>≈50%</strong>
+          <p>Gains in sales and profits from group-based intervention, with stronger employment and survival over the decade that followed.</p>
+          <span aria-hidden="true">↗</span>
+        </a>
+        <a href="https://openknowledge.worldbank.org/bitstreams/141c01fd-f443-5b1e-ae76-30faf59bbe87/download" target="_blank" rel="noopener" class="evidence-row">
+          <span class="evidence-place">Mexico / SMEs</span>
+          <strong>+57%</strong>
+          <p>Employment five years later, alongside a 72 percent larger wage bill, after a year-long management intervention.</p>
+          <span aria-hidden="true">↗</span>
+        </a>
+      </div>
+      <article class="proof-copy proof-close">
+        <p>Different countries.</p>
+        <p>Different industries.</p>
+        <p>Different fractures.</p>
+        <p class="standalone">The economics moved when the operating systems moved.</p>
+        <p>These gains did not come from understanding the problem more elegantly. They came from changing how work traveled, how decisions were made, how resources were controlled, and how responsibility survived execution.</p>
+        <p>Knowledge can identify the fracture.</p>
+        <p class="standalone">Only execution can close it.</p>
+        <p>We do not borrow another company's results as a guarantee.</p>
+        <p>We use them to prove that the work is measurable.</p>
+        <p>And we are willing to be measured the same way.</p>
+        <p>Before the work begins, we define what counts: the baseline, the target, the metrics, the acceptance criteria, and the exact window over which the correction must hold under load.</p>
+        <p>We do not declare victory because the process looks cleaner or the meetings sound more aligned.</p>
+        <ul class="proof-questions">
+          <li>Did the date recover?</li><li>Did the bleed stop?</li><li>Did the handoff hold?</li><li>Did the margin return?</li><li>Can the enterprise see, govern, and repeat the outcome without us?</li>
+        </ul>
+        <p>Proof is not what improves while we are watching.</p>
+        <p class="standalone">Proof is what remains intact after control is returned.</p>
+        <div class="certificate">
+          <p>If it cannot be observed, measured, and sustained, frame the completion certificate.</p>
+          <p>It proves the engagement ended.</p>
+          <p><strong>It does not prove the work was done.</strong></p>
+        </div>
+      </article>
+    </section>
+
+    <section class="your-move" id="your-move" aria-labelledby="move-title">
+      <div class="move-mark" aria-hidden="true"><img src="logo-mark.svg" alt=""></div>
+      <div class="move-copy">
+        <p class="kicker">11 / Your move</p>
+        <h2 id="move-title">Mature principals do not prove their strength by solving every problem with only the resources already inside the enterprise.</h2>
+        <p>They prove it by recognizing what the outcome requires and deploying it before exposure becomes consequence.</p>
+        <p>That is not a concession of control.</p>
+        <p class="standalone">It is control exercised.</p>
+        <p>Bring us the outcome no one can fully explain. The missed date that refuses to recover. The margin that keeps disappearing. The operation that performs by department and fails as an enterprise.</p>
+        <p>We will trace the consequence, find where control disappeared, and determine what the correction requires.</p>
+        <p>If the work exposes a capability the current structure does not contain, the engagement can be built to carry it. Temporary operating coverage. Specialized execution. Whatever must be present for the outcome to hold.</p>
+        <p>Not every problem requires an intervention. Not every engagement requires the same capabilities.</p>
+        <p class="standalone">The first step is simply a conversation.</p>
+        <p>If any of this sounds familiar, give us a call. Let’s talk through what is happening, what you have already tried, and whether there is useful work for us to do together.</p>
+      </div>
+      <div class="contact-panel" aria-label="Contact KIT55 Soma">
+        <p class="contact-title">Let’s talk.</p>
+        <a href="tel:+18587442700"><span>Call</span><strong>858 744 2700</strong><i aria-hidden="true">↗</i></a>
+        <a href="mailto:info@kit55soma.com"><span>Email</span><strong>info@kit55soma.com</strong><i aria-hidden="true">↗</i></a>
+        <a href="https://www.linkedin.com/in/federico-leff-25b613108/" target="_blank" rel="noopener"><span>LinkedIn</span><strong>Connect directly</strong><i aria-hidden="true">↗</i></a>
+        <!-- Scheduling remains intentionally dormant until a Calendly URL is supplied. -->
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <a class="footer-brand" href="#top">
+      <img src="logo-mark.svg" alt="" width="64" height="64">
+      <span><strong>KIT55</strong><small>SOMA</small></span>
+    </a>
+    <p>Aligning fragmented operations around one enterprise outcome.</p>
+    <div class="footer-meta"><span>© <span data-year></span> KIT55 Solutions LLC</span><a href="mailto:info@kit55soma.com">info@kit55soma.com</a></div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
