@@ -30,7 +30,7 @@ img, svg { display: block; max-width: 100%; }
 .site-header { position: fixed; z-index: 100; top: 0; left: 0; width: 100%; display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 24px; padding: 20px clamp(20px,4vw,62px); transition: background .3s, border-color .3s; border-bottom: 1px solid transparent; }
 .site-header.is-scrolled { background: rgba(17,17,15,.91); backdrop-filter: blur(14px); border-color: var(--line-light); }
 .brand, .footer-brand { display: flex; align-items: center; gap: 12px; text-decoration: none; }
-.brand img { width: 40px; color: var(--paper); }
+.brand img { width: 66px; height: auto; }
 .brand-type, .footer-brand span { display: flex; flex-direction: column; line-height: .92; }
 .brand-type strong, .footer-brand strong { font: 400 1.45rem var(--serif); letter-spacing: .06em; }
 .brand-type small, .footer-brand small { margin-top: 6px; font: 400 .58rem var(--mono); letter-spacing: .5em; color: #aaa296; }
@@ -151,7 +151,7 @@ blockquote { margin: 90px 0 0; padding: 30px 0 0; border-top: 1px solid currentC
 .contact-panel a:focus-visible { outline: 2px solid var(--signal); outline-offset: 5px; }
 
 footer { padding: 70px clamp(22px,5vw,80px) 30px; background: var(--carbon); color: var(--paper); }
-.footer-brand img { width: 55px; color: var(--paper); }
+.footer-brand img { width: 78px; height: auto; }
 footer > p { max-width: 540px; margin: 50px 0 100px; font: 400 clamp(2rem,4vw,3.7rem)/1.02 var(--serif); }
 .footer-meta { display: flex; justify-content: space-between; gap: 30px; padding-top: 20px; border-top: 1px solid var(--line-light); font: 400 .64rem var(--mono); text-transform: uppercase; letter-spacing: .1em; color: #8b857b; }
 .footer-meta a { text-decoration: none; }
@@ -174,6 +174,7 @@ footer > p { max-width: 540px; margin: 50px 0 100px; font: 400 clamp(2rem,4vw,3.
 
 @media (max-width: 640px) {
   .site-header { gap: 14px; padding: 15px 18px; }
+  .brand img { width: 54px; }
   .header-line { display: none; }
   .header-cta { margin-left: auto; }
   .hero { padding: 150px 22px 62px; }
