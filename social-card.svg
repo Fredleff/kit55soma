@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#11110f"/>
+  <g transform="translate(90 105)" fill="none" stroke="#f0ebe1" stroke-width="7" stroke-linecap="round">
+    <path d="M0 0c90 0 110 74 168 130M0 80c86 0 112 40 168 82M0 160h168M0 240c86 0 112-40 168-82M0 320c90 0 110-74 168-130"/>
+    <circle cx="220" cy="160" r="52"/>
+    <path d="M272 160h110"/>
+    <circle cx="382" cy="160" r="13" fill="#a22a1f" stroke="#a22a1f"/>
+  </g>
+  <text x="560" y="260" fill="#f0ebe1" font-family="Georgia, serif" font-size="128" letter-spacing="8">KIT55</text>
+  <text x="570" y="330" fill="#bdb5a8" font-family="monospace" font-size="34" letter-spacing="30">SOMA</text>
+  <line x1="90" y1="500" x2="1110" y2="500" stroke="#4b4842"/>
+  <text x="90" y="555" fill="#d3cbbf" font-family="monospace" font-size="23" letter-spacing="3">ALIGNING FRAGMENTED OPERATIONS AROUND ONE ENTERPRISE OUTCOME.</text>
+</svg>
