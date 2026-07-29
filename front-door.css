@@ -403,6 +403,7 @@
 .principle-card p { color: #bdb5a8; }
 
 /* Fault Line article */
+.article-header { color: var(--paper); }
 .article-page { background: var(--paper); color: var(--ink); }
 .article-header .site-nav a { color: #aaa296; }
 .article-hero {
