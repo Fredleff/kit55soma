@@ -15,7 +15,8 @@
   transition: color .2s;
 }
 .site-nav a:hover,
-.site-nav a:focus-visible { color: var(--paper); }
+.site-nav a:focus-visible,
+.site-nav a[aria-current="page"] { color: var(--paper); }
 .site-nav a:focus-visible { outline: 1px solid var(--signal-light); outline-offset: 5px; }
 
 .commercial-hero .hero-copy { width: min(1120px, 86vw); }
