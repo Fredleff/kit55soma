@@ -15,7 +15,20 @@ const reveal = new IntersectionObserver((entries) => {
   }
 }, { threshold: 0.08, rootMargin: '0px 0px -7% 0px' });
 
-document.querySelectorAll('.chapter .prose > *, .method-step, .receipt, .evidence-row, .move-copy > *')
+document.querySelectorAll([
+  '.chapter .prose > *',
+  '.method-step',
+  '.receipt',
+  '.evidence-row',
+  '.move-copy > *',
+  '.entry-card',
+  '.engagement-card',
+  '.stance-line',
+  '.featured-fault > *',
+  '.dispatch-card',
+  '.principle-card',
+  '.article-body > *'
+].join(', '))
   .forEach((element) => {
     element.classList.add('reveal');
     reveal.observe(element);
