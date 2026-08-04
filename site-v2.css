@@ -12,6 +12,11 @@
     radial-gradient(circle at 16% 78%, rgba(17,17,15,.05), transparent 22%);
 }
 
+.receipt strong {
+  font-size: clamp(3.1rem,4vw,4.4rem);
+  line-height: .85;
+}
+
 .lead-cta {
   margin: -28px 0 40px !important;
   font: 400 clamp(1.8rem,3.8vw,3.3rem)/1.08 var(--serif) !important;
@@ -155,6 +160,12 @@
 }
 
 @media (max-width: 620px) {
+  .header-cta {
+    max-width: 16ch;
+    text-align: right;
+    line-height: 1.2;
+  }
+
   .engagement-grid {
     grid-template-columns: 1fr;
   }
