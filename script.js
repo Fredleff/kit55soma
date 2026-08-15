@@ -9,6 +9,24 @@ addEventListener('scroll', setHeader, { passive: true });
 const mediaConfig = window.KIT55_MEDIA || {};
 const mediaScreen = document.querySelector('[data-media-screen]');
 
+const isMediaWindowActive = (config) => {
+  if (!config.enabled) return false;
+
+  const schedule = config.schedule;
+  if (!schedule?.activeWeekdays?.length) return true;
+
+  try {
+    const weekday = new Intl.DateTimeFormat('en-US', {
+      weekday: 'short',
+      timeZone: schedule.timeZone || 'America/Los_Angeles'
+    }).format(new Date());
+
+    return schedule.activeWeekdays.includes(weekday);
+  } catch {
+    return false;
+  }
+};
+
 const createMediaAsset = (config) => {
   if (!config.mediaUrl || config.mode === 'statement') return null;
 
@@ -43,7 +61,7 @@ const createMediaAsset = (config) => {
   return null;
 };
 
-if (mediaScreen && mediaConfig.enabled) {
+if (mediaScreen && isMediaWindowActive(mediaConfig)) {
   const eyebrow = mediaScreen.querySelector('[data-media-eyebrow]');
   const headline = mediaScreen.querySelector('[data-media-headline]');
   const body = mediaScreen.querySelector('[data-media-body]');
@@ -57,6 +75,8 @@ if (mediaScreen && mediaConfig.enabled) {
   if (cta && mediaConfig.ctaLabel && mediaConfig.ctaUrl) {
     cta.textContent = mediaConfig.ctaLabel;
     cta.href = mediaConfig.ctaUrl;
+    cta.target = '_blank';
+    cta.rel = 'noopener';
     cta.hidden = false;
   }
 
@@ -64,6 +84,8 @@ if (mediaScreen && mediaConfig.enabled) {
   if (asset && assetContainer) {
     assetContainer.replaceChildren(asset);
     assetContainer.hidden = false;
+  } else {
+    mediaScreen.classList.add('media-screen-statement');
   }
 
   mediaScreen.classList.add(`theme-${mediaConfig.theme || 'carbon'}`);
