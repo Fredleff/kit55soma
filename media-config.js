@@ -2,7 +2,7 @@ window.KIT55_MEDIA = {
   enabled: true,
 
   /*
-    The media window is scheduled in Pacific Time so every visitor sees
+    The weekend dispatch is scheduled in Pacific Time so every visitor sees
     the same Friday-through-Sunday publication window.
   */
   schedule: {
@@ -25,33 +25,16 @@ window.KIT55_MEDIA = {
 
   mode: "statement",
   theme: "carbon",
-  eyebrow: "Friday Send-Off | 002",
-  headline: "An orchestra is fragmented by design.",
-  body: `Different instruments.
-Different timing.
-Different responsibilities.
+  eyebrow: "Weekend Dispatch · Live Friday through Sunday",
+  headline: "Friday Send-Off | 002",
+  body: `An orchestra is fragmented by design.
 
-Harmony does not require everyone to play the same note.
+Different instruments. Different timing. Different responsibilities.
 
-It requires a score, a conductor, and accountability for the whole.
-
-Business is no different.
-
-Specialization creates the capability.
-Governance determines whether it becomes performance.
-
-Enough business for one week.
-
-Let the orchestra rest.
-
-See you Monday.
-
-KIT55 Soma
-kit55soma.com
-info@kit55soma.com`,
+Harmony does not require everyone to play the same note. It requires a score, a conductor, and accountability for the whole.`,
   mediaUrl: "",
   posterUrl: "",
-  ctaLabel: "Join the conversation on LinkedIn",
+  ctaLabel: "Continue on LinkedIn ↗",
   ctaUrl: "https://www.linkedin.com/in/federico-leff-25b613108/",
 
   /*
