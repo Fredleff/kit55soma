@@ -68,19 +68,34 @@
   background-image: radial-gradient(circle at 78% 26%, rgba(216,91,73,.12), transparent 30%);
 }
 
-.media-screen[hidden] {
+.media-screen[hidden],
+.media-screen-asset[hidden] {
   display: none;
 }
 
 .media-screen {
   position: relative;
-  min-height: min(84svh, 900px);
-  padding: clamp(110px,14vw,190px) clamp(22px,6vw,96px);
+  min-height: 0;
+  padding: clamp(52px,6vw,82px) clamp(22px,6vw,96px);
   overflow: hidden;
   color: var(--paper);
-  background: var(--carbon);
-  border-top: 1px solid var(--line-light);
+  background:
+    linear-gradient(90deg, rgba(162,42,31,.12), transparent 38%),
+    var(--carbon-soft);
+  border-top: 5px solid var(--signal);
   border-bottom: 1px solid var(--line-light);
+}
+
+.media-screen::after {
+  content: "FRI — SUN";
+  position: absolute;
+  right: -14px;
+  bottom: -34px;
+  color: rgba(240,235,225,.035);
+  font: 500 clamp(5rem,12vw,11rem)/1 var(--mono);
+  letter-spacing: -.08em;
+  white-space: nowrap;
+  pointer-events: none;
 }
 
 .media-screen.theme-signal {
@@ -93,37 +108,78 @@
 }
 
 .media-screen-shell {
-  width: min(1320px, 100%);
+  position: relative;
+  z-index: 1;
+  width: min(1180px, 100%);
   margin: 0 auto;
+}
+
+.media-screen-statement .media-screen-copy {
   display: grid;
-  grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr);
-  gap: clamp(50px,8vw,130px);
-  align-items: center;
+  grid-template-columns: minmax(145px,.48fr) minmax(0,1.55fr) minmax(190px,.62fr);
+  grid-template-rows: auto auto;
+  column-gap: clamp(30px,5vw,76px);
+  align-items: start;
+}
+
+.media-screen-copy .kicker {
+  grid-column: 1;
+  grid-row: 1 / span 2;
+  margin: 5px 0 0;
+  padding-top: 14px;
+  border-top: 1px solid var(--signal-light);
+  color: var(--signal-light);
 }
 
 .media-screen-copy h2 {
-  max-width: 12ch;
-  margin: 0 0 34px;
-  font: 400 clamp(3.4rem,7.7vw,8.2rem)/.87 var(--serif);
-  letter-spacing: -.05em;
+  grid-column: 2;
+  grid-row: 1;
+  max-width: none;
+  margin: 0 0 22px;
+  font: 400 clamp(2.8rem,4.4vw,4.9rem)/.9 var(--serif);
+  letter-spacing: -.045em;
   text-wrap: balance;
 }
 
 .media-screen-copy > p:not(.kicker) {
-  max-width: 610px;
+  grid-column: 2;
+  grid-row: 2;
+  max-width: 660px;
   margin: 0;
-  font-size: clamp(1.05rem,1.5vw,1.3rem);
+  color: #c8c0b4;
+  font-size: clamp(.98rem,1.25vw,1.12rem);
+  line-height: 1.62;
+  white-space: pre-line;
 }
 
 .media-screen-cta {
+  grid-column: 3;
+  grid-row: 1 / span 2;
+  align-self: center;
   display: inline-flex;
-  margin-top: 36px;
-  padding: 14px 18px;
-  border: 1px solid currentColor;
-  font: 500 .7rem var(--mono);
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  min-height: 58px;
+  padding: 16px 18px;
+  border: 1px solid rgba(240,235,225,.45);
+  font: 500 .68rem/1.4 var(--mono);
   text-decoration: none;
   text-transform: uppercase;
-  letter-spacing: .12em;
+  letter-spacing: .1em;
+  transition: color .2s, background .2s, border-color .2s;
+}
+
+.media-screen-cta:hover,
+.media-screen-cta:focus-visible {
+  color: var(--paper);
+  background: var(--signal);
+  border-color: var(--signal);
+  outline: none;
+}
+
+.media-screen-cta:focus-visible {
+  box-shadow: 0 0 0 3px var(--paper);
 }
 
 .media-screen-asset {
@@ -143,19 +199,6 @@
   min-height: 380px;
   object-fit: cover;
   border: 0;
-}
-
-
-.media-screen-copy > p:not(.kicker) {
-  white-space: pre-line;
-}
-
-.media-screen-statement .media-screen-shell {
-  grid-template-columns: minmax(0, 900px);
-}
-
-.media-screen-statement .media-screen-copy h2 {
-  max-width: 14ch;
 }
 
 .contact-panel .calendar-link[hidden] {
