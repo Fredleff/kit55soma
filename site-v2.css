@@ -145,6 +145,19 @@
   border: 0;
 }
 
+
+.media-screen-copy > p:not(.kicker) {
+  white-space: pre-line;
+}
+
+.media-screen-statement .media-screen-shell {
+  grid-template-columns: minmax(0, 900px);
+}
+
+.media-screen-statement .media-screen-copy h2 {
+  max-width: 14ch;
+}
+
 .contact-panel .calendar-link[hidden] {
   display: none;
 }
