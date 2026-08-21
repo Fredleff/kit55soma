@@ -33,7 +33,7 @@ const createMediaAsset = (config) => {
   if (config.mode === 'image') {
     const image = document.createElement('img');
     image.src = config.mediaUrl;
-    image.alt = config.headline || 'KIT55 Soma media';
+    image.alt = config.mediaAlt || config.headline || 'KIT55 Soma media';
     image.loading = 'lazy';
     return image;
   }
@@ -82,7 +82,18 @@ if (mediaScreen && isMediaWindowActive(mediaConfig)) {
 
   const asset = createMediaAsset(mediaConfig);
   if (asset && assetContainer) {
-    assetContainer.replaceChildren(asset);
+    if (mediaConfig.mode === 'image' && mediaConfig.ctaUrl) {
+      const assetLink = document.createElement('a');
+      assetLink.className = 'media-screen-asset-link';
+      assetLink.href = mediaConfig.ctaUrl;
+      assetLink.target = '_blank';
+      assetLink.rel = 'noopener';
+      assetLink.setAttribute('aria-label', 'Open Weekend Send-Off No. 003 on LinkedIn');
+      assetLink.append(asset);
+      assetContainer.replaceChildren(assetLink);
+    } else {
+      assetContainer.replaceChildren(asset);
+    }
     assetContainer.hidden = false;
   } else {
     mediaScreen.classList.add('media-screen-statement');
