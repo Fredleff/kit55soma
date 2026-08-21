@@ -90,6 +90,10 @@ if (mediaScreen && isMediaWindowActive(mediaConfig)) {
 
   mediaScreen.classList.add(`theme-${mediaConfig.theme || 'carbon'}`);
   mediaScreen.hidden = false;
+
+  if (location.hash === '#weekend-sendoff') {
+    requestAnimationFrame(() => mediaScreen.scrollIntoView({ block: 'start' }));
+  }
 }
 
 const calendarLink = document.querySelector('[data-calendar-link]');
