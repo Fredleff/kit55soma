@@ -25,7 +25,7 @@ window.KIT55_MEDIA = {
 
   mode: "statement",
   theme: "signal",
-  eyebrow: "Weekend Send-Off / No. 003 / Live Friday through Sunday",
+  eyebrow: "Weekend Send-Off / No. 003 / Live Friday through Sunday",
   headline: "The deadline did not slip on Friday.",
   body: `It slipped in every handoff before it.
 
