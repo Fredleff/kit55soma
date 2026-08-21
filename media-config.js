@@ -24,14 +24,19 @@ window.KIT55_MEDIA = {
   */
 
   mode: "statement",
-  theme: "carbon",
-  eyebrow: "Weekend Dispatch · Live Friday through Sunday",
-  headline: "Friday Send-Off | 002",
-  body: `An orchestra is fragmented by design.
+  theme: "signal",
+  eyebrow: "Weekend Send-Off / No. 003 / Live Friday through Sunday",
+  headline: "The deadline did not slip on Friday.",
+  body: `It slipped in every handoff before it.
 
-Different instruments. Different timing. Different responsibilities.
+No one missed the meeting.
+No one missed the report.
+No one missed their own target.
 
-Harmony does not require everyone to play the same note. It requires a score, a conductor, and accountability for the whole.`,
+They only missed each other.
+
+THE CALENDAR TOOK THE BLAME.
+THE OPERATING MODEL EARNED IT.`,
   mediaUrl: "",
   posterUrl: "",
   ctaLabel: "Continue on LinkedIn ↗",
