@@ -295,3 +295,29 @@
     margin-top: 30px;
   }
 }
+
+/* Weekend Send-Off No. 003 */
+.media-screen.theme-signal::after {
+  content: "FRI / SUN";
+  color: rgba(240,235,225,.06);
+}
+
+.media-screen.theme-signal .media-screen-copy .kicker {
+  color: var(--paper);
+  border-color: rgba(240,235,225,.72);
+}
+
+.media-screen.theme-signal .media-screen-copy > p:not(.kicker) {
+  color: var(--paper);
+}
+
+.media-screen.theme-signal .media-screen-cta {
+  border-color: rgba(240,235,225,.72);
+}
+
+.media-screen.theme-signal .media-screen-cta:hover,
+.media-screen.theme-signal .media-screen-cta:focus-visible {
+  color: var(--signal);
+  background: var(--paper);
+  border-color: var(--paper);
+}
