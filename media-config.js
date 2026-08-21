@@ -41,11 +41,10 @@ THE OPERATING MODEL EARNED IT.`,
   mediaAlt: "Weekend Send-Off No. 003 artwork showing completed tasks separated by broken handoffs before a missed Friday outcome.",
   posterUrl: "",
   ctaLabel: "Continue on LinkedIn ↗",
-  ctaUrl: "https://www.linkedin.com/in/federico-leff-25b613108/",
+  ctaUrl: "https://www.linkedin.com/feed/update/urn:li:activity:7496690984349511681/",
 
   /*
-    Replace ctaUrl with the direct LinkedIn post URL after publication.
-    The profile link remains the truthful fallback until that URL exists.
+    Direct link to the published Weekend Send-Off No. 003 on LinkedIn.
   */
   calendarUrl: ""
 };
