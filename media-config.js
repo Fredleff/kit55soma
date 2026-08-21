@@ -23,11 +23,11 @@ window.KIT55_MEDIA = {
     paper
   */
 
-  mode: "statement",
-  theme: "signal",
+  mode: "image",
+  theme: "carbon",
   eyebrow: "Weekend Send-Off / No. 003 / Live Friday through Sunday",
   headline: "The deadline did not slip on Friday.",
-  body: `It slipped in every handoff before it.
+  body: `It slipped in every handoff beforehand.
 
 No one missed the meeting.
 No one missed the report.
@@ -37,14 +37,15 @@ They only missed each other.
 
 THE CALENDAR TOOK THE BLAME.
 THE OPERATING MODEL EARNED IT.`,
-  mediaUrl: "",
+  mediaUrl: "friday-sendoff-003-linkedin.svg",
+  mediaAlt: "Weekend Send-Off No. 003 artwork showing completed tasks separated by broken handoffs before a missed Friday outcome.",
   posterUrl: "",
   ctaLabel: "Continue on LinkedIn ↗",
   ctaUrl: "https://www.linkedin.com/in/federico-leff-25b613108/",
 
   /*
-    Add a scheduling URL here when available.
-    The calendar link remains invisible while this value is blank.
+    Replace ctaUrl with the direct LinkedIn post URL after publication.
+    The profile link remains the truthful fallback until that URL exists.
   */
   calendarUrl: ""
 };
