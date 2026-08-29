@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#070807"/>
+      <stop offset=".58" stop-color="#10100e"/>
+      <stop offset="1" stop-color="#080806"/>
+    </linearGradient>
+    <linearGradient id="red" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#55150f"/>
+      <stop offset=".55" stop-color="#27100d"/>
+      <stop offset="1" stop-color="#100a08"/>
+    </linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="12"/></filter>
+    <pattern id="grain" width="90" height="90" patternUnits="userSpaceOnUse">
+      <circle cx="11" cy="20" r="1" fill="#fff" opacity=".025"/>
+      <circle cx="62" cy="53" r="1" fill="#fff" opacity=".018"/>
+      <circle cx="35" cy="78" r=".8" fill="#fff" opacity=".02"/>
+    </pattern>
+  </defs>
+
+  <rect width="1080" height="1350" fill="url(#bg)"/>
+  <rect width="1080" height="1350" fill="url(#grain)"/>
+
+  <g font-family="Arial, Helvetica, sans-serif">
+    <text x="62" y="48" fill="#b58a45" font-size="15" font-weight="700" letter-spacing="4">WEEKEND SEND-OFF</text>
+    <text x="1018" y="48" text-anchor="end" fill="#b58a45" font-size="15" font-weight="700" letter-spacing="4">NO. 004</text>
+
+    <text x="540" y="125" text-anchor="middle" fill="#eee8dc" font-size="66" font-weight="900" letter-spacing="-1">YOUR TEAM ISN'T</text>
+    <text x="540" y="194" text-anchor="middle" fill="#eee8dc" font-size="66" font-weight="900" letter-spacing="-1">WORKING THE WEEKEND.</text>
+    <text x="540" y="263" text-anchor="middle" fill="#c7a263" font-size="66" font-weight="900" letter-spacing="-1">THEY'RE SERVING</text>
+    <text x="540" y="332" text-anchor="middle" fill="#c7a263" font-size="66" font-weight="900" letter-spacing="-1">YOUR INDECISION.</text>
+
+    <line x1="300" y1="365" x2="460" y2="365" stroke="#b58a45"/>
+    <text x="540" y="371" text-anchor="middle" fill="#b58a45" font-size="15" font-weight="700" letter-spacing="5">FRI / SUN</text>
+    <line x1="620" y1="365" x2="780" y2="365" stroke="#b58a45"/>
+
+    <text x="540" y="414" text-anchor="middle" fill="#e6dfd4" font-size="21">Every priority stayed urgent.</text>
+    <text x="540" y="444" text-anchor="middle" fill="#e6dfd4" font-size="21">Every owner stayed optional.</text>
+    <text x="540" y="474" text-anchor="middle" fill="#e6dfd4" font-size="21">Every conflict stayed unresolved.</text>
+    <text x="540" y="514" text-anchor="middle" fill="#e6dfd4" font-size="21">So the calendar became the escalation plan.</text>
+
+    <!-- Empty executive boardroom -->
+    <rect x="72" y="550" width="936" height="175" rx="2" fill="#171713" stroke="#544936"/>
+    <rect x="72" y="550" width="936" height="6" fill="#c7a263" opacity=".72"/>
+    <rect x="284" y="630" width="512" height="38" rx="19" fill="#292721"/>
+    <line x1="314" y1="668" x2="300" y2="706" stroke="#6c6558" stroke-width="7"/>
+    <line x1="766" y1="668" x2="780" y2="706" stroke="#6c6558" stroke-width="7"/>
+    <g fill="#24231f" stroke="#514d44">
+      <rect x="240" y="584" width="55" height="58" rx="7"/>
+      <rect x="344" y="584" width="55" height="58" rx="7"/>
+      <rect x="447" y="584" width="55" height="58" rx="7"/>
+      <rect x="578" y="584" width="55" height="58" rx="7"/>
+      <rect x="681" y="584" width="55" height="58" rx="7"/>
+      <rect x="785" y="584" width="55" height="58" rx="7"/>
+    </g>
+    <text x="96" y="586" fill="#8c8477" font-size="13" letter-spacing="3">EXECUTIVE LEVEL / LIGHTS OUT</text>
+
+    <!-- Operational level -->
+    <rect x="72" y="725" width="936" height="260" fill="url(#red)" stroke="#61231c"/>
+    <ellipse cx="540" cy="815" rx="420" ry="150" fill="#a22a1f" opacity=".14" filter="url(#glow)"/>
+    <g stroke="#9c3a2e" stroke-width="3" opacity=".78" fill="none">
+      <path d="M112 790 C220 730, 260 900, 390 804 S610 896, 745 786 S920 900, 975 802"/>
+      <path d="M110 850 C230 930, 305 760, 450 872 S705 760, 972 876"/>
+      <path d="M126 930 C260 820, 360 980, 520 880 S780 980, 955 900"/>
+    </g>
+    <g fill="#191513" stroke="#8d4035">
+      <rect x="112" y="775" width="160" height="72"/>
+      <rect x="310" y="862" width="160" height="72"/>
+      <rect x="610" y="770" width="160" height="72"/>
+      <rect x="808" y="862" width="160" height="72"/>
+    </g>
+    <g fill="#d6c7b6" font-size="13" font-weight="700" letter-spacing="1.4">
+      <text x="192" y="808" text-anchor="middle">DECISIONS</text><text x="192" y="829" text-anchor="middle">UNRESOLVED</text>
+      <text x="390" y="895" text-anchor="middle">APPROVALS</text><text x="390" y="916" text-anchor="middle">PENDING</text>
+      <text x="690" y="803" text-anchor="middle">DEPENDENCIES</text><text x="690" y="824" text-anchor="middle">UNANSWERED</text>
+      <text x="888" y="895" text-anchor="middle">OWNERS</text><text x="888" y="916" text-anchor="middle">OPTIONAL</text>
+    </g>
+    <rect x="465" y="752" width="150" height="64" rx="4" fill="#100b09" stroke="#dd3b29" stroke-width="2"/>
+    <text x="540" y="780" text-anchor="middle" fill="#ff5a42" font-size="22" font-weight="700">5:07 PM</text>
+    <text x="540" y="801" text-anchor="middle" fill="#ff5a42" font-size="12" font-weight="700" letter-spacing="2">FRIDAY</text>
+    <text x="96" y="762" fill="#d85b49" font-size="13" letter-spacing="3">OPERATING LEVEL / CONSEQUENCES ACTIVE</text>
+
+    <rect x="160" y="952" width="760" height="88" rx="3" fill="#171614" stroke="#504537"/>
+    <text x="540" y="990" text-anchor="middle" fill="#eee8dc" font-size="25" font-weight="800">BY FRIDAY, LEADERSHIP WENT HOME.</text>
+    <text x="540" y="1024" text-anchor="middle" fill="#d85b49" font-size="25" font-weight="800">THE AMBIGUITY STAYED LATE.</text>
+
+    <rect x="92" y="1065" width="896" height="190" rx="3" fill="#11110f" stroke="#b58a45" stroke-width="1.5"/>
+    <text x="540" y="1113" text-anchor="middle" fill="#eee8dc" font-size="42" font-weight="900">BURNOUT IS OFTEN</text>
+    <text x="540" y="1163" text-anchor="middle" fill="#c7a263" font-size="47" font-weight="900">GOVERNANCE DEBT</text>
+    <text x="540" y="1206" text-anchor="middle" fill="#eee8dc" font-size="31" font-weight="900">COLLECTED FROM THE PEOPLE</text>
+    <text x="540" y="1243" text-anchor="middle" fill="#eee8dc" font-size="31" font-weight="900">WITH THE LEAST AUTHORITY.</text>
+
+    <text x="540" y="1292" text-anchor="middle" fill="#b58a45" font-size="24" font-weight="700" letter-spacing="7">KIT55 SOMA</text>
+    <text x="540" y="1321" text-anchor="middle" fill="#e6dfd4" font-size="16">Organizational engineering for fragmented ecosystems.</text>
+    <text x="540" y="1343" text-anchor="middle" fill="#b58a45" font-size="14" letter-spacing="3">kit55soma.com</text>
+  </g>
+</svg>
