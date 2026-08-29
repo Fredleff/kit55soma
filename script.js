@@ -88,7 +88,7 @@ if (mediaScreen && isMediaWindowActive(mediaConfig)) {
       assetLink.href = mediaConfig.ctaUrl;
       assetLink.target = '_blank';
       assetLink.rel = 'noopener';
-      assetLink.setAttribute('aria-label', 'Open Weekend Send-Off No. 003 on LinkedIn');
+      assetLink.setAttribute('aria-label', 'Open Weekend Send-Off No. 004 on LinkedIn');
       assetLink.append(asset);
       assetContainer.replaceChildren(assetLink);
     } else {
