@@ -25,26 +25,26 @@ window.KIT55_MEDIA = {
 
   mode: "image",
   theme: "carbon",
-  eyebrow: "Weekend Send-Off / No. 003 / Live Friday through Sunday",
-  headline: "The deadline did not slip on Friday.",
-  body: `It slipped in every handoff beforehand.
+  eyebrow: "Weekend Send-Off / No. 004 / Live Friday through Sunday",
+  headline: "Your team isn't working the weekend.",
+  body: `Every priority stayed urgent.
+Every owner stayed optional.
+Every conflict stayed unresolved.
 
-No one missed the meeting.
-No one missed the report.
-No one missed their own target.
+So the calendar became the escalation plan.
 
-They only missed each other.
+BY FRIDAY, LEADERSHIP WENT HOME.
+THE AMBIGUITY STAYED LATE.
 
-THE CALENDAR TOOK THE BLAME.
-THE OPERATING MODEL EARNED IT.`,
-  mediaUrl: "friday-sendoff-003-linkedin.svg",
-  mediaAlt: "Weekend Send-Off No. 003 artwork showing completed tasks separated by broken handoffs before a missed Friday outcome.",
+BURNOUT IS OFTEN GOVERNANCE DEBT COLLECTED FROM THE PEOPLE WITH THE LEAST AUTHORITY.`,
+  mediaUrl: "weekend-sendoff-004-linkedin.svg",
+  mediaAlt: "Weekend Send-Off No. 004 artwork contrasting an empty executive boardroom with an operating level still absorbing unresolved decisions after Friday.",
   posterUrl: "",
   ctaLabel: "Continue on LinkedIn ↗",
-  ctaUrl: "https://www.linkedin.com/feed/update/urn:li:activity:7496690984349511681/",
+  ctaUrl: "https://www.linkedin.com/feed/update/urn:li:activity:7499261205677731840/",
 
   /*
-    Direct link to the published Weekend Send-Off No. 003 on LinkedIn.
+    Direct link to the published Weekend Send-Off No. 004 on LinkedIn.
   */
   calendarUrl: ""
 };
