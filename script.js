@@ -130,3 +130,40 @@ document.querySelectorAll(
   element.classList.add('reveal');
   reveal.observe(element);
 });
+
+// Privacy-first aggregate traffic measurement. One visit per tab session per day.
+(() => {
+  const day = new Date().toISOString().slice(0, 10);
+  const sessionKey = `kit55-visit-${day}`;
+
+  try {
+    if (sessionStorage.getItem(sessionKey)) return;
+  } catch {
+    // Tracking still works when browser storage is unavailable.
+  }
+
+  let referrer = 'direct';
+  try {
+    if (document.referrer) {
+      referrer = new URL(document.referrer).hostname.replace(/^www\./, '') || 'direct';
+    }
+  } catch {
+    referrer = 'direct';
+  }
+
+  fetch('https://kit55-traffic-counter.freddyleff.chatgpt.site/collect', {
+    method: 'POST',
+    mode: 'cors',
+    credentials: 'omit',
+    keepalive: true,
+    headers: { 'content-type': 'application/json' },
+    body: JSON.stringify({ path: location.pathname, referrer })
+  }).then((response) => {
+    if (!response.ok) return;
+    try {
+      sessionStorage.setItem(sessionKey, '1');
+    } catch {
+      // No persistent identifier is required or created.
+    }
+  }).catch(() => {});
+})();
