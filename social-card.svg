@@ -1,30 +1,31 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
   <title id="title">KIT55 Soma</title>
-  <desc id="desc">Segmentation is inevitable. Governance decides whether the system flourishes or implodes.</desc>
-  <rect width="1200" height="630" fill="#11110f"/>
-  <g fill="none" stroke="#746f66" stroke-width="2" opacity=".48">
+  <desc id="desc">KIT55 Soma aligns fragmented operations around one enterprise outcome.</desc>
+  <rect width="1200" height="630" fill="#211d1b"/>
+  <circle cx="930" cy="88" r="310" fill="#d8795c" opacity=".08"/>
+  <g fill="none" stroke="#8f8177" stroke-width="2" opacity=".55">
     <path d="M70 90C260 115 310 214 466 282"/>
     <path d="M30 250C230 232 322 292 466 316"/>
     <path d="M72 470C244 420 330 360 466 350"/>
     <path d="M212 585C310 472 362 400 488 370"/>
     <path d="M564 330H1110"/>
   </g>
-  <g fill="#746f66">
+  <g fill="#8f8177">
     <circle cx="70" cy="90" r="9"/>
     <circle cx="30" cy="250" r="9"/>
     <circle cx="72" cy="470" r="9"/>
     <circle cx="212" cy="585" r="9"/>
   </g>
-  <circle cx="518" cy="330" r="67" fill="#11110f" stroke="#f0ebe1" stroke-width="4"/>
-  <circle cx="518" cy="330" r="37" fill="#f0ebe1" opacity=".08"/>
-  <circle cx="1110" cy="330" r="13" fill="#d85b49"/>
+  <circle cx="518" cy="330" r="67" fill="#211d1b" stroke="#f7f1e7" stroke-width="4"/>
+  <circle cx="518" cy="330" r="37" fill="#f7f1e7" opacity=".1"/>
+  <circle cx="1110" cy="330" r="13" fill="#d8795c"/>
 
-  <text x="72" y="72" fill="#d85b49" font-family="Arial, sans-serif" font-size="18" letter-spacing="4">KIT55 SOMA</text>
-  <text x="660" y="170" fill="#f0ebe1" font-family="Georgia, serif" font-size="70">Segmentation</text>
-  <text x="660" y="242" fill="#f0ebe1" font-family="Georgia, serif" font-size="70">is inevitable.</text>
-  <text x="660" y="345" fill="#d85b49" font-family="Georgia, serif" font-size="52">Governance decides</text>
-  <text x="660" y="404" fill="#d85b49" font-family="Georgia, serif" font-size="52">whether the system</text>
-  <text x="660" y="463" fill="#d85b49" font-family="Georgia, serif" font-size="52">flourishes or implodes.</text>
-  <line x1="660" y1="510" x2="1110" y2="510" stroke="#746f66"/>
-  <text x="660" y="552" fill="#b8b0a4" font-family="Arial, sans-serif" font-size="19" letter-spacing="1">GOVERNANCE FOR INEVITABLE SEGMENTATION</text>
+  <text x="72" y="72" fill="#d8795c" font-family="Arial, sans-serif" font-size="18" letter-spacing="4">KIT55 SOMA</text>
+  <text x="630" y="166" fill="#f7f1e7" font-family="Georgia, serif" font-size="65">Fragmentation</text>
+  <text x="630" y="234" fill="#f7f1e7" font-family="Georgia, serif" font-size="65">is inevitable.</text>
+  <text x="630" y="336" fill="#d8795c" font-family="Georgia, serif" font-size="46">Alignment turns it</text>
+  <text x="630" y="388" fill="#d8795c" font-family="Georgia, serif" font-size="46">into an enterprise</text>
+  <text x="630" y="440" fill="#d8795c" font-family="Georgia, serif" font-size="46">result.</text>
+  <line x1="630" y1="492" x2="1110" y2="492" stroke="#8f8177"/>
+  <text x="630" y="535" fill="#d0c5b8" font-family="Arial, sans-serif" font-size="15" letter-spacing="1.5">ORGANIZATIONAL ENGINEERING FOR FRAGMENTED OPERATIONS</text>
 </svg>

@@ -1,14 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&display=swap');
 
 :root {
-  --carbon: #11110f;
-  --carbon-soft: #1a1916;
-  --paper: #f0ebe1;
-  --paper-deep: #ddd5c7;
-  --ink: #171613;
-  --muted: #746f66;
-  --signal: #a22a1f;
-  --signal-light: #d85b49;
+  --carbon: #211d1b;
+  --carbon-soft: #2b2522;
+  --paper: #f7f1e7;
+  --paper-deep: #e7dccb;
+  --ink: #211d1b;
+  --muted: #756b63;
+  --signal: #8f2d27;
+  --signal-light: #d8795c;
   --line-dark: rgba(17,17,15,.16);
   --line-light: rgba(240,235,225,.18);
   --serif: "Instrument Serif", Georgia, serif;
@@ -28,7 +28,7 @@ img, svg { display: block; max-width: 100%; }
 .skip-link:focus { top: 18px; }
 
 .site-header { position: fixed; z-index: 100; top: 0; left: 0; width: 100%; display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 24px; padding: 20px clamp(20px,4vw,62px); transition: background .3s, border-color .3s; border-bottom: 1px solid transparent; }
-.site-header.is-scrolled { background: rgba(17,17,15,.91); backdrop-filter: blur(14px); border-color: var(--line-light); }
+.site-header.is-scrolled { background: rgba(33,29,27,.92); backdrop-filter: blur(14px); border-color: var(--line-light); }
 .brand, .footer-brand { display: flex; align-items: center; gap: 12px; text-decoration: none; }
 .brand img { width: 66px; height: auto; }
 .brand-type, .footer-brand span { display: flex; flex-direction: column; line-height: .92; }
@@ -38,7 +38,7 @@ img, svg { display: block; max-width: 100%; }
 .header-cta { font: 500 .72rem var(--mono); text-transform: uppercase; letter-spacing: .12em; text-decoration: none; }
 .header-cta span { color: var(--signal-light); margin-left: 8px; }
 
-.hero { min-height: 100svh; position: relative; display: flex; align-items: flex-end; overflow: hidden; padding: 170px clamp(24px,7vw,110px) 90px; background: var(--carbon); }
+.hero { min-height: 100svh; position: relative; display: flex; align-items: flex-end; overflow: hidden; padding: 170px clamp(24px,7vw,110px) 90px; background: radial-gradient(circle at 78% 20%, rgba(216,121,92,.16), transparent 32%), linear-gradient(145deg, #302724 0%, var(--carbon) 62%); }
 .hero-network { position: absolute; inset: -8% -8% -8% 34%; opacity: .54; }
 .hero-network svg { width: 100%; height: 100%; }
 .network-lines, .axon { fill: none; stroke: #837d72; stroke-width: 2; }

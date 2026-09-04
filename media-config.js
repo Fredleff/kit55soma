@@ -1,5 +1,5 @@
 window.KIT55_MEDIA = {
-  enabled: true,
+  enabled: false,
 
   /*
     The weekend dispatch is scheduled in Pacific Time so every visitor sees
@@ -44,7 +44,8 @@ BURNOUT IS OFTEN GOVERNANCE DEBT COLLECTED FROM THE PEOPLE WITH THE LEAST AUTHOR
   ctaUrl: "https://www.linkedin.com/feed/update/urn:li:activity:7499261205677731840/",
 
   /*
-    Direct link to the published Weekend Send-Off No. 004 on LinkedIn.
+    The open media window remains available. Keep it disabled between live
+    dispatches, then update it with the current artwork and LinkedIn URL.
   */
   calendarUrl: ""
 };
