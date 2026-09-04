@@ -68,6 +68,144 @@
   background-image: radial-gradient(circle at 78% 26%, rgba(216,91,73,.12), transparent 30%);
 }
 
+.field-case {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(110px,14vw,190px) clamp(22px,5vw,80px);
+  color: var(--ink);
+  background:
+    radial-gradient(circle at 86% 10%, rgba(216,121,92,.2), transparent 25%),
+    linear-gradient(135deg, #f7f1e7 0%, #e8ddce 100%);
+}
+
+.field-case::after {
+  content: "RECOVERY";
+  position: absolute;
+  right: -2vw;
+  top: 42%;
+  color: rgba(143,45,39,.045);
+  font: 500 clamp(5rem,13vw,13rem)/1 var(--mono);
+  letter-spacing: -.08em;
+  pointer-events: none;
+}
+
+.field-case-intro,
+.field-case-body {
+  position: relative;
+  z-index: 1;
+  width: min(1280px,100%);
+  margin: 0 auto;
+}
+
+.field-case-intro {
+  display: grid;
+  grid-template-columns: minmax(0,1.45fr) minmax(280px,.55fr);
+  gap: clamp(44px,8vw,120px);
+  align-items: end;
+  padding-bottom: clamp(58px,8vw,94px);
+  border-bottom: 1px solid var(--line-dark);
+}
+
+.field-case-intro h2 {
+  max-width: 920px;
+  margin: 0;
+  font: 400 clamp(3.4rem,7.4vw,7.6rem)/.88 var(--serif);
+  letter-spacing: -.045em;
+  text-wrap: balance;
+}
+
+.field-case-intro h2 em {
+  color: var(--signal);
+  font-weight: 400;
+}
+
+.field-case-deck {
+  margin: 0 0 8px;
+  padding-top: 18px;
+  border-top: 3px solid var(--signal);
+  font: 400 clamp(1.28rem,2.2vw,1.85rem)/1.2 var(--serif);
+}
+
+.field-case-body {
+  display: grid;
+  grid-template-columns: minmax(0,1.05fr) minmax(360px,.75fr);
+  gap: clamp(54px,9vw,140px);
+  padding-top: clamp(64px,9vw,110px);
+}
+
+.case-label {
+  margin: 0 0 30px;
+  color: var(--signal);
+  font: 500 .67rem/1.5 var(--mono);
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+
+.field-case-story > p:not(.case-label) {
+  max-width: 720px;
+  margin: 0 0 1.35em;
+  font-size: clamp(1.03rem,1.35vw,1.22rem);
+}
+
+.field-case-story > p:nth-of-type(3) {
+  font: 400 clamp(1.8rem,3vw,2.75rem)/1.05 var(--serif);
+  color: var(--signal);
+}
+
+.field-case-story blockquote {
+  margin-top: 66px;
+  padding-top: 26px;
+  border-color: var(--signal);
+  font-size: clamp(2.1rem,4vw,4rem);
+}
+
+.control-chain {
+  align-self: start;
+  padding: 34px;
+  border: 1px solid rgba(33,29,27,.3);
+  background: rgba(247,241,231,.65);
+  backdrop-filter: blur(8px);
+}
+
+.control-chain ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid var(--line-dark);
+}
+
+.control-chain li {
+  display: grid;
+  grid-template-columns: 38px 1fr;
+  gap: 4px 14px;
+  padding: 22px 0;
+  border-bottom: 1px solid var(--line-dark);
+}
+
+.control-chain li span {
+  grid-row: 1 / span 2;
+  color: var(--signal);
+  font: 400 .65rem var(--mono);
+}
+
+.control-chain li strong {
+  font: 400 1.55rem/1 var(--serif);
+}
+
+.control-chain li small {
+  color: var(--muted);
+  font-size: .76rem;
+  line-height: 1.45;
+}
+
+.chain-rule {
+  margin: 30px 0 0;
+  color: var(--signal);
+  font: 500 .69rem/1.5 var(--mono);
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
 .media-screen[hidden],
 .media-screen-asset[hidden] {
   display: none;
@@ -87,7 +225,7 @@
 }
 
 .media-screen::after {
-  content: "FRI — SUN";
+  content: "FRI / SUN";
   position: absolute;
   right: -14px;
   bottom: -34px;
@@ -206,6 +344,19 @@
 }
 
 @media (max-width: 900px) {
+  .field-case-intro,
+  .field-case-body {
+    grid-template-columns: 1fr;
+  }
+
+  .field-case-deck {
+    max-width: 560px;
+  }
+
+  .control-chain {
+    width: min(100%,680px);
+  }
+
   .engagement-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -216,6 +367,19 @@
 }
 
 @media (max-width: 620px) {
+  .field-case {
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+
+  .field-case-intro h2 {
+    font-size: clamp(3.35rem,16vw,5.4rem);
+  }
+
+  .control-chain {
+    padding: 24px 20px;
+  }
+
   .header-cta {
     max-width: 16ch;
     text-align: right;
