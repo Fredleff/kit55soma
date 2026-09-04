@@ -1,5 +1,5 @@
 window.KIT55_MEDIA = {
-  enabled: false,
+  enabled: true,
 
   /*
     The weekend dispatch is scheduled in Pacific Time so every visitor sees
@@ -25,27 +25,21 @@ window.KIT55_MEDIA = {
 
   mode: "image",
   theme: "carbon",
-  eyebrow: "Weekend Send-Off / No. 004 / Live Friday through Sunday",
-  headline: "Your team isn't working the weekend.",
-  body: `Every priority stayed urgent.
-Every owner stayed optional.
-Every conflict stayed unresolved.
+  eyebrow: "Weekend Send-Off / No. 005 / Live Friday through Sunday",
+  headline: "If execution starts when the sale closes, you started too late.",
+  body: `Before the signature, suppliers, capacity, logistics, commercial terms, and contingencies should already be aligned.
 
-So the calendar became the escalation plan.
-
-BY FRIDAY, LEADERSHIP WENT HOME.
-THE AMBIGUITY STAYED LATE.
-
-BURNOUT IS OFTEN GOVERNANCE DEBT COLLECTED FROM THE PEOPLE WITH THE LEAST AUTHORITY.`,
-  mediaUrl: "weekend-sendoff-004-linkedin.svg",
-  mediaAlt: "Weekend Send-Off No. 004 artwork contrasting an empty executive boardroom with an operating level still absorbing unresolved decisions after Friday.",
+CLOSING IS A SALES EVENT.
+REVENUE IS AN OPERATING RESULT.
+PROFIT IS WHAT SURVIVES EXECUTION.`,
+  mediaUrl: "weekend-sendoff-005-linkedin.webp",
+  mediaAlt: "Weekend Send-Off No. 005 artwork showing commercial preparation, factory execution, and delivery aligned before the sale closes.",
   posterUrl: "",
   ctaLabel: "Continue on LinkedIn ↗",
-  ctaUrl: "https://www.linkedin.com/feed/update/urn:li:activity:7499261205677731840/",
+  ctaUrl: "https://www.linkedin.com/feed/update/urn:li:activity:7501688470877253632/",
 
   /*
-    The open media window remains available. Keep it disabled between live
-    dispatches, then update it with the current artwork and LinkedIn URL.
+    Direct link to the published Weekend Send-Off No. 005 on LinkedIn.
   */
   calendarUrl: ""
 };
