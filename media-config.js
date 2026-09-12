@@ -25,21 +25,19 @@ window.KIT55_MEDIA = {
 
   mode: "image",
   theme: "carbon",
-  eyebrow: "Weekend Send-Off / No. 005 / Live Friday through Sunday",
-  headline: "If execution starts when the sale closes, you started too late.",
-  body: `Before the signature, suppliers, capacity, logistics, commercial terms, and contingencies should already be aligned.
+  eyebrow: "September 11, 2001 / In Remembrance",
+  headline: "We remember.",
+  body: `Twenty-five years later, we remember the 2,977 lives taken on September 11, 2001, the families who continue to carry that loss, and the first responders and recovery workers whose courage and sacrifice endured long after that morning.
 
-CLOSING IS A SALES EVENT.
-REVENUE IS AN OPERATING RESULT.
-PROFIT IS WHAT SURVIVES EXECUTION.`,
-  mediaUrl: "weekend-sendoff-005-linkedin.webp",
-  mediaAlt: "Weekend Send-Off No. 005 artwork showing commercial preparation, factory execution, and delivery aligned before the sale closes.",
+We remember.`,
+  mediaUrl: "september-11-remembrance.webp",
+  mediaAlt: "American flag before the New York City skyline and Tribute in Light, with the words September 11, 2001. We remember.",
   posterUrl: "",
-  ctaLabel: "Continue on LinkedIn ↗",
-  ctaUrl: "https://www.linkedin.com/feed/update/urn:li:activity:7501688470877253632/",
+  ctaLabel: "",
+  ctaUrl: "",
 
   /*
-    Direct link to the published Weekend Send-Off No. 005 on LinkedIn.
+    No business call to action during the September 11 remembrance.
   */
   calendarUrl: ""
 };
