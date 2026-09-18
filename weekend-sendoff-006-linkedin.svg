@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350" role="img" aria-labelledby="title desc">
+  <title id="title">KIT55 Soma Weekend Send-Off No. 006</title>
+  <desc id="desc">The lowest quote can carry the highest cost. A purchase order captures the price, but not downstream operating consequences.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F6F1E8"/>
+      <stop offset="1" stop-color="#E7EEF0"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="14" stdDeviation="22" flood-color="#183247" flood-opacity="0.13"/>
+    </filter>
+  </defs>
+
+  <rect width="1080" height="1350" fill="url(#bg)"/>
+  <circle cx="975" cy="90" r="210" fill="#D7784D" opacity="0.12"/>
+  <circle cx="75" cy="1260" r="265" fill="#2E6A73" opacity="0.09"/>
+
+  <g font-family="Nimbus Sans, Arial, sans-serif">
+    <text x="76" y="88" fill="#2E6A73" font-size="24" font-weight="700" letter-spacing="4">WEEKEND SEND-OFF</text>
+    <text x="1004" y="88" fill="#D7784D" font-size="24" font-weight="700" letter-spacing="2" text-anchor="end">NO. 006</text>
+    <line x1="76" y1="116" x2="1004" y2="116" stroke="#2E6A73" stroke-width="2" opacity="0.35"/>
+
+    <text x="76" y="210" fill="#183247" font-size="72" font-weight="700" letter-spacing="-1">
+      <tspan x="76" dy="0">THE LOWEST QUOTE</tspan>
+      <tspan x="76" dy="82">CAN CARRY THE</tspan>
+      <tspan x="76" dy="82" fill="#C65F38">HIGHEST COST.</tspan>
+    </text>
+
+    <text x="78" y="510" fill="#183247" font-size="31" font-weight="400">
+      <tspan x="78" dy="0">Price is visible before the commitment.</tspan>
+      <tspan x="78" dy="44">Consequence arrives after it.</tspan>
+    </text>
+
+    <g filter="url(#shadow)">
+      <rect x="76" y="624" width="928" height="395" rx="26" fill="#FFFFFF" opacity="0.94"/>
+    </g>
+    <rect x="76" y="624" width="18" height="395" rx="9" fill="#D7784D"/>
+    <text x="132" y="684" fill="#2E6A73" font-size="23" font-weight="700" letter-spacing="3">THE QUOTE RARELY CARRIES THE COST OF:</text>
+
+    <g fill="#183247" font-size="30" font-weight="400">
+      <circle cx="143" cy="749" r="5" fill="#D7784D"/><text x="166" y="759">Unclear specifications</text>
+      <circle cx="143" cy="807" r="5" fill="#D7784D"/><text x="166" y="817">Rejected quality and rework</text>
+      <circle cx="143" cy="865" r="5" fill="#D7784D"/><text x="166" y="875">Schedule recovery and expediting</text>
+      <circle cx="143" cy="923" r="5" fill="#D7784D"/><text x="166" y="933">Cash trapped in inventory</text>
+      <circle cx="143" cy="981" r="5" fill="#D7784D"/><text x="166" y="991">A missed installation window</text>
+    </g>
+
+    <text x="76" y="1096" fill="#183247" font-size="34" font-weight="700">
+      <tspan x="76" dy="0">A PURCHASE ORDER CAPTURES THE PRICE.</tspan>
+      <tspan x="76" dy="48">IT DOES NOT CAPTURE THE CONSEQUENCE.</tspan>
+    </text>
+
+    <text x="76" y="1192" fill="#C65F38" font-size="27" font-weight="700" letter-spacing="1.2">
+      <tspan x="76" dy="0">PURCHASING IS PART OF PROCUREMENT.</tspan>
+      <tspan x="76" dy="39">PRICE IS ONLY PART OF THE DECISION.</tspan>
+    </text>
+
+    <line x1="76" y1="1262" x2="1004" y2="1262" stroke="#183247" stroke-width="2" opacity="0.25"/>
+    <text x="76" y="1312" fill="#183247" font-size="27" font-weight="700" letter-spacing="2">KIT55 SOMA</text>
+    <text x="1004" y="1312" fill="#2E6A73" font-size="22" font-weight="500" text-anchor="end">kit55soma.com</text>
+  </g>
+</svg>
