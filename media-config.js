@@ -24,20 +24,17 @@ window.KIT55_MEDIA = {
   */
 
   mode: "image",
-  theme: "carbon",
-  eyebrow: "September 11, 2001 / In Remembrance",
-  headline: "We remember.",
-  body: `Twenty-five years later, we remember the 2,977 lives taken on September 11, 2001, the families who continue to carry that loss, and the first responders and recovery workers whose courage and sacrifice endured long after that morning.
+  theme: "paper",
+  eyebrow: "Weekend Send-Off No. 006",
+  headline: "The lowest quote can carry the highest cost.",
+  body: `Price is visible before the commitment. Consequence arrives after it.
 
-We remember.`,
-  mediaUrl: "september-11-remembrance.webp",
-  mediaAlt: "American flag before the New York City skyline and Tribute in Light, with the words September 11, 2001. We remember.",
+Purchasing is part of procurement. Price is only part of the decision.`,
+  mediaUrl: "weekend-sendoff-006-linkedin.svg",
+  mediaAlt: "Weekend Send-Off No. 006. The lowest quote can carry the highest cost. A purchase order captures the price, but not downstream operating consequences.",
   posterUrl: "",
-  ctaLabel: "",
-  ctaUrl: "",
+  ctaLabel: "Join the discussion on LinkedIn",
+  ctaUrl: "https://www.linkedin.com/feed/update/urn:li:share:7506831907930685440/",
 
-  /*
-    No business call to action during the September 11 remembrance.
-  */
   calendarUrl: ""
 };
