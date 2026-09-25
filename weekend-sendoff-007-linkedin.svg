@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <rect width="1080" height="1350" fill="#10293b"/>
+  <rect x="0" y="0" width="18" height="1350" fill="#e77847"/>
+  <circle cx="930" cy="155" r="225" fill="#173c52"/>
+  <circle cx="930" cy="155" r="128" fill="none" stroke="#62c6cf" stroke-width="3" opacity="0.55"/>
+
+  <g font-family="Arial, Helvetica, sans-serif">
+    <text x="76" y="89" font-size="24" font-weight="700" letter-spacing="6" fill="#62c6cf">WEEKEND SEND-OFF</text>
+    <text x="1004" y="89" text-anchor="end" font-size="24" font-weight="700" letter-spacing="3" fill="#e77847">NO. 007</text>
+    <line x1="76" y1="116" x2="1004" y2="116" stroke="#6f91a3" stroke-width="1"/>
+
+    <text x="76" y="208" font-size="66" font-weight="800" fill="#f4f1e9">BETTER TERMS</text>
+    <text x="76" y="282" font-size="66" font-weight="800" fill="#f4f1e9">CANNOT RESCUE</text>
+    <text x="76" y="356" font-size="66" font-weight="800" fill="#e77847">BAD TIMING.</text>
+
+    <text x="79" y="440" font-size="31" fill="#d6e3e7">Payment terms decide when cash leaves.</text>
+    <text x="79" y="484" font-size="31" fill="#d6e3e7">The operation decides how long it stays trapped.</text>
+
+    <rect x="76" y="548" width="928" height="280" rx="24" fill="#f4f1e9"/>
+    <text x="124" y="605" font-size="23" font-weight="700" letter-spacing="4" fill="#2f7780">THE WORKING-CAPITAL CLOCK</text>
+
+    <line x1="158" y1="695" x2="922" y2="695" stroke="#b7c7cb" stroke-width="5"/>
+    <circle cx="176" cy="695" r="17" fill="#e77847"/>
+    <circle cx="430" cy="695" r="17" fill="#62c6cf"/>
+    <circle cx="684" cy="695" r="17" fill="#62c6cf"/>
+    <circle cx="904" cy="695" r="17" fill="#e77847"/>
+
+    <text x="176" y="652" text-anchor="middle" font-size="20" font-weight="700" fill="#10293b">COMMIT</text>
+    <text x="430" y="652" text-anchor="middle" font-size="20" font-weight="700" fill="#10293b">PRODUCE</text>
+    <text x="684" y="652" text-anchor="middle" font-size="20" font-weight="700" fill="#10293b">DELIVER</text>
+    <text x="904" y="652" text-anchor="middle" font-size="20" font-weight="700" fill="#10293b">RECOVER</text>
+
+    <text x="176" y="744" text-anchor="middle" font-size="18" fill="#4b5e68">Cash is</text>
+    <text x="176" y="770" text-anchor="middle" font-size="18" fill="#4b5e68">obligated</text>
+    <text x="430" y="744" text-anchor="middle" font-size="18" fill="#4b5e68">Value is</text>
+    <text x="430" y="770" text-anchor="middle" font-size="18" fill="#4b5e68">created</text>
+    <text x="684" y="744" text-anchor="middle" font-size="18" fill="#4b5e68">Value is</text>
+    <text x="684" y="770" text-anchor="middle" font-size="18" fill="#4b5e68">accepted</text>
+    <text x="904" y="744" text-anchor="middle" font-size="18" fill="#4b5e68">Cash</text>
+    <text x="904" y="770" text-anchor="middle" font-size="18" fill="#4b5e68">returns</text>
+
+    <text x="76" y="913" font-size="32" font-weight="700" fill="#f4f1e9">A purchase can be well priced, properly approved,</text>
+    <text x="76" y="959" font-size="32" font-weight="700" fill="#f4f1e9">and negotiated on favorable terms.</text>
+    <text x="76" y="1024" font-size="32" fill="#d6e3e7">If it enters the sequence too early, stalls between stages,</text>
+    <text x="76" y="1070" font-size="32" fill="#d6e3e7">or waits without earning revenue, the cash is still trapped.</text>
+
+    <text x="76" y="1162" font-size="35" font-weight="800" fill="#62c6cf">THE REAL QUESTION IS NOT ONLY:</text>
+    <text x="76" y="1206" font-size="32" font-weight="800" fill="#f4f1e9">WHEN DO WE PAY?</text>
+    <text x="395" y="1206" font-size="32" font-weight="800" fill="#e77847">WHEN DOES THE CASH RETURN?</text>
+
+    <line x1="76" y1="1260" x2="1004" y2="1260" stroke="#6f91a3" stroke-width="1"/>
+    <text x="76" y="1312" font-size="29" font-weight="800" letter-spacing="2" fill="#f4f1e9">KIT55 SOMA</text>
+    <text x="1004" y="1312" text-anchor="end" font-size="24" fill="#62c6cf">kit55soma.com</text>
+  </g>
+</svg>
